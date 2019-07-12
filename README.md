@@ -16,3 +16,7 @@ Windows 7 / 8 /10
 Screenshots
 -----------
 ![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/projects/football-manager-cli.png)
+
+LICENSE
+-------
+GNU General Public License v3.0
