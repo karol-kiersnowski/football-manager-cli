@@ -19,9 +19,25 @@ Screenshots
 
 Preformatted text
 -----------------
-___
-tekst
-___
+
+```
+____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____ 
+|___ |  | |  |  |  |__] |__| |    |       |\/| |__| |\ | |__| | __ |___ |__/ 
+|    |__| |__|  |  |__] |  | |___ |___    |  | |  | | \| |  | |__] |___ |  \ 
+
+								    v. 19.07
+Select your language / Wybierz swój język
+
+1. English
+2. Polski
+
+To select English language, write 1 and press Enter
+Aby wybrać język polski, wpisz 2 i wciśnij Enter
+
+Selection / Wybór: 
+
+```
+
 ```
 ____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____ 
 |___ |  | |  |  |  |__] |__| |    |       |\/| |__| |\ | |__| | __ |___ |__/ 
@@ -39,7 +55,6 @@ ____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____
 
 Selection: 
 ```
-___
 
 LICENSE
 -------
