@@ -7,7 +7,12 @@ Project site - [karol-kiersnowski.prv.pl](http://karol-kiersnowski.prv.pl/projec
 Technologies
 ------------
 * C# - Console Application
-* SQLite
+* SQL - SQLite
+
+Language
+--------
+* User interface: English / Polish
+* Source code: English (individual issues remained untranslated from Polish)
 
 Requirements
 ------------
