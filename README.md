@@ -17,6 +17,25 @@ Screenshots
 -----------
 ![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/projects/football-manager-cli.png)
 
+PRE
+---
+____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____ 
+|___ |  | |  |  |  |__] |__| |    |       |\/| |__| |\ | |__| | __ |___ |__/ 
+|    |__| |__|  |  |__] |  | |___ |___    |  | |  | | \| |  | |__] |___ |  \ 
+
+>> Menu
+
+1. Play a friendly match
+2. Start a manager mode
+3. Load a manager mode
+4. Generate new data
+5. About game
+6. Options
+0. Exit
+
+Selection: 
+
+
 LICENSE
 -------
 GNU General Public License v3.0
