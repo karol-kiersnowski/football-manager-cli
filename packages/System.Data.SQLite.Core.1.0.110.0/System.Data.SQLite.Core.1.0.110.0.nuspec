@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>System.Data.SQLite.Core</id>
+    <version>1.0.110.0</version>
+    <title>System.Data.SQLite Core (x86/x64)</title>
+    <authors>SQLite Development Team</authors>
+    <owners>SQLite Development Team</owners>
+    <licenseUrl>https://www.sqlite.org/copyright.html</licenseUrl>
+    <projectUrl>https://system.data.sqlite.org/</projectUrl>
+    <iconUrl>https://system.data.sqlite.org/images/sqlite128.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.</description>
+    <summary />
+    <copyright>Public Domain</copyright>
+    <language>en-US</language>
+    <tags>sqlite database ado.net provider interop</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework2.0" />
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETFramework4.5.1" />
+      <group targetFramework=".NETFramework4.6" />
+      <group targetFramework="Unsupported0.0" />
+    </dependencies>
+  </metadata>
+</package>

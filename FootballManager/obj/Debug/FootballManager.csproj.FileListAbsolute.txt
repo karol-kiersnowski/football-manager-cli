@@ -1,0 +1,32 @@
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\bin\Debug\FootballManager.exe.config
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\bin\Debug\FootballManager.exe
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\bin\Debug\FootballManager.pdb
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\bin\Debug\System.Data.SQLite.dll
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\bin\Debug\System.Data.SQLite.xml
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\obj\Debug\FootballManager.csprojResolveAssemblyReference.cache
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\obj\Debug\FootballManager.exe
+c:\users\karol\documents\visual studio 2013\Projects\FootballManager\FootballManager\obj\Debug\FootballManager.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\bin\Debug\FootballManager.exe.config
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\obj\Debug\FootballManager.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\obj\Debug\FootballManager.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\bin\Debug\FootballManager.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\bin\Debug\FootballManager.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\bin\Debug\System.Data.SQLite.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\bin\Debug\System.Data.SQLite.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.22\FootballManager\obj\Debug\FootballManager.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\bin\Debug\FootballManager.exe.config
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\obj\Debug\FootballManager.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\obj\Debug\FootballManager.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\bin\Debug\FootballManager.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\bin\Debug\FootballManager.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\bin\Debug\System.Data.SQLite.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\bin\Debug\System.Data.SQLite.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.05.30\FootballManager\obj\Debug\FootballManager.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\bin\Debug\FootballManager.exe.config
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\obj\Debug\FootballManager.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\obj\Debug\FootballManager.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\obj\Debug\FootballManager.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\bin\Debug\FootballManager.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\bin\Debug\FootballManager.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\bin\Debug\System.Data.SQLite.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\FootballManager 2019.07.12\FootballManager\bin\Debug\System.Data.SQLite.xml
