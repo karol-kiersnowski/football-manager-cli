@@ -17,9 +17,11 @@ Screenshots
 -----------
 ![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/projects/football-manager-cli.png)
 
-PRE
+Preformatted text
+-----------------
 ---
-<span style="color:blue">some *blue* text</span>
+tekst
+---
 ```
 ____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____ 
 |___ |  | |  |  |  |__] |__| |    |       |\/| |__| |\ | |__| | __ |___ |__/ 
@@ -36,6 +38,7 @@ ____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____
 0. Exit
 
 Selection: 
+---
 ```
 
 LICENSE
