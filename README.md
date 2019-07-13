@@ -20,7 +20,7 @@ Windows 7 / 8 /10
 
 Screenshots
 -----------
-![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/projects/football-manager-cl.png)
+![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/projects/football-manager-cli.png)
 
 Author
 ------
