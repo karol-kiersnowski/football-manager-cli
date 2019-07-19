@@ -6,8 +6,9 @@ Project site - [karol-kiersnowski.prv.pl](http://karol-kiersnowski.prv.pl/projec
 
 Technologies
 ------------
-* C# - Console Application
-* SQL - SQLite
+* Language: C# - Console Application
+* Database: SQLite
+* IDE: Visual Studio 2013
 
 Language
 --------
@@ -16,7 +17,7 @@ Language
 
 Requirements
 ------------
-Windows 7 / 8 /10
+Windows 7 / 8 / 10
 
 Screenshots
 -----------
