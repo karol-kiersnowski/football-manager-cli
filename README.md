@@ -27,6 +27,6 @@ Author
 ------
 Karol Kiersnowski
 
-Licence
+License
 -------
 [GNU General Public License v3.0](https://github.com/kargol92/football-manager-cli/blob/master/LICENSE)
