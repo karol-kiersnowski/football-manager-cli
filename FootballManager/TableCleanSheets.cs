@@ -1,6 +1,0 @@
-﻿namespace FootballManager
-{
-    class TableCleanSheets
-    {
-    }
-}
