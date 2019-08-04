@@ -17,7 +17,7 @@ Language
 
 Requirements
 ------------
-Windows 7 / 8 / 10 or GNU Linux (Wine / Mono)
+Windows (7 / 8 / 10) or GNU Linux (Wine / Mono)
 
 Screenshots
 -----------
