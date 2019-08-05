@@ -96,5 +96,33 @@ namespace FootballManager
                 Console.WriteLine(i + 1 + ". " + options[i]);
             Console.WriteLine();
         }
+
+        protected void drawBlocks(int level)
+        {
+            char sign = '\u25A0';
+            if (level < 20)
+                Console.Write("{0}", sign);
+            else if (level < 40)
+                Console.Write("{0}{1}", sign, sign);
+            else if (level < 60)
+                Console.Write("{0}{1}{2}", sign, sign, sign);
+            else if (level < 80)
+                Console.Write("{0}{1}{2}{3}", sign, sign, sign, sign);
+            else if (level < 100)
+                Console.Write("{0}{1}{2}{3}{4}", sign, sign, sign, sign, sign);
+        }
+
+        protected void draw4Blocks(int level)
+        {
+            char sign = '\u25A0';
+            if (level < 20)
+                Console.Write("{0}", sign);
+            else if (level < 50)
+                Console.Write("{0}{1}", sign, sign);
+            else if (level < 80)
+                Console.Write("{0}{1}{2}", sign, sign, sign);
+            else if (level < 100)
+                Console.Write("{0}{1}{2}{3}", sign, sign, sign, sign);
+        }
     }
 }

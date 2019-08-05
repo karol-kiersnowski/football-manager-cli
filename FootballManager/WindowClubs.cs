@@ -31,6 +31,9 @@ namespace FootballManager
             Console.SetCursorPosition(x, y);
             Console.Write(Text.name);
             x += 23;
+            //Console.SetCursorPosition(x, y);
+            //Console.Write(Text.total);
+            //x += 7;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.attack);
             x += 7;
@@ -51,14 +54,17 @@ namespace FootballManager
                 Console.SetCursorPosition(x, y + i);
                 Console.Write(clubs[i].fullName);
                 x += 23;
+                //Console.SetCursorPosition(x, y + i);
+                //drawBlocks(clubs[i].total);
+                //x += 7;
                 Console.SetCursorPosition(x, y + i);
-                Console.Write(clubs[i].attack);
+                drawBlocks(clubs[i].attack);
                 x += 7;
                 Console.SetCursorPosition(x, y + i);
-                Console.Write(clubs[i].middle);
+                drawBlocks(clubs[i].middle);
                 x += 7;
                 Console.SetCursorPosition(x, y + i);
-                Console.Write(clubs[i].defense);
+                drawBlocks(clubs[i].defense);
             }
 
             Console.WriteLine("\n");
