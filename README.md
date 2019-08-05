@@ -8,7 +8,7 @@ Technologies
 ------------
 * Language: C# - Console Application
 * Database: SQLite
-* IDE: Visual Studio 2013
+* IDE: Visual Studio 2013 / MonoDevelop
 
 Language
 --------
