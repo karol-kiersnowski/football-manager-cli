@@ -2,7 +2,7 @@ Football Manager CLI
 ====================
 Football manager is a simple game written in C# - Console Application. It uses SQLite library.
 
-Project site - [karol-kiersnowski.prv.pl](http://karol-kiersnowski.prv.pl/projects.php?lang=en&theme=default#football-manager-cli)
+Project site - [karol-kiersnowski.prv.pl/#football-manager-cli](http://karol-kiersnowski.prv.pl/#football-manager-cli)
 
 Technologies
 ------------
