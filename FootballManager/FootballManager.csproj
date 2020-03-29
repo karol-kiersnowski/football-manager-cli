@@ -102,6 +102,7 @@
     <Compile Include="WindowTransferList.cs" />
     <Compile Include="WindowTransfers.cs" />
     <Compile Include="WindowTransfersSales.cs" />
+    <Compile Include="CSV.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

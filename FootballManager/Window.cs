@@ -76,6 +76,11 @@ namespace FootballManager
         protected abstract void draw();
         protected abstract void selectOption();
 
+        protected void Write(string text)
+        {
+            Console.Write(text);
+        }
+
         protected void displayHeader()
         {
             Console.Clear();

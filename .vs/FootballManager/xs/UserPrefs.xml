@@ -1,21 +1,25 @@
 ﻿<Properties StartupConfiguration="{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|Default">
   <MonoDevelop.Ide.ItemProperties.FootballManager PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FootballManager/Window.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FootballManager/Database.cs">
     <Files>
-      <File FileName="FootballManager/Window.cs" Line="122" Column="32" />
+      <File FileName="FootballManager/Window.cs" Line="81" Column="33" />
       <File FileName="FootballManager/WindowClubs.cs" Line="34" Column="15" />
-      <File FileName="FootballManager/Program.cs" Line="16" Column="43" />
-      <File FileName="FootballManager/WindowSquad.cs" Line="135" Column="25" />
+      <File FileName="FootballManager/Player.cs" Line="1" Column="1" />
+      <File FileName="FootballManager/Database.cs" Line="1" Column="1" />
+      <File FileName="FootballManager/CSV.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FootballManager" expanded="True">
             <Node name="FootballManager" expanded="True">
-              <Node name="Window.cs" selected="True" />
+              <Node name="Database.cs" selected="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

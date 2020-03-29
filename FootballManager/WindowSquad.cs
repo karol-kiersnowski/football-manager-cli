@@ -53,19 +53,25 @@ namespace FootballManager
             //Console.Write(Text.tot);
             //x += 5;
             Console.SetCursorPosition(x, y);
+            Console.Write(Text.age);
+            x += 4;
+            Console.SetCursorPosition(x, y);
             Console.Write(Text.gk);
-            x += 6;
+            x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write("Def");
-            x += 6;
+            x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.plm);
-            x += 6;
+            x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.sho);
-            x += 6;
+            x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.sta);
+            x += 4;
+            Console.SetCursorPosition(x, y);
+            Console.Write("Ldr");
 
             y += 1;
 
@@ -122,10 +128,38 @@ namespace FootballManager
                     }
                     Console.ResetColor();
                     x += 2;
-                    //Console.SetCursorPosition(x, y + i);
-                    //draw4Blocks(players[i].skills);
-                    //x += 5;
+
                     Console.SetCursorPosition(x, y + i);
+                    setColorAge(players[i].age);
+                    Console.Write(players[i].age);
+                    x += 4;
+                    Console.SetCursorPosition(x, y + i);
+                    setColor(players[i].goalkeeping);
+                    Console.Write(players[i].goalkeeping);
+                    x += 4;
+                    Console.SetCursorPosition(x, y + i);
+                    setColor(players[i].defending);
+                    Console.Write(players[i].defending);
+                    x += 4;
+                    Console.SetCursorPosition(x, y + i);
+                    setColor(players[i].playmaking);
+                    Console.Write(players[i].playmaking);
+                    x += 4;
+                    Console.SetCursorPosition(x, y + i);
+                    setColor(players[i].shooting);
+                    Console.Write(players[i].shooting);
+                    x += 4;
+                    Console.SetCursorPosition(x, y + i);
+                    setColor(players[i].condition);
+                    Console.Write(players[i].condition);
+                    x += 4;
+                    Console.SetCursorPosition(x, y + i);
+                    setColor(players[i].leadership);
+                    Console.Write(players[i].leadership);
+                    x += 4;
+
+
+                    /*Console.SetCursorPosition(x, y + i);
                     drawBlocks(players[i].goalkeeping);
                     x += 6;
                     Console.SetCursorPosition(x, y + i);
@@ -138,7 +172,7 @@ namespace FootballManager
                     drawBlocks(players[i].shooting);
                     x += 6;
                     Console.SetCursorPosition(x, y + i);
-                    drawBlocks(players[i].condition);
+                    drawBlocks(players[i].condition);*/
 
                     Console.ResetColor();
                 }
@@ -212,7 +246,7 @@ namespace FootballManager
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
         }
 
-        void setColor(int age, string data)
+        void setColorAge(int age)
         {
             if (age < 20)
                 Console.ForegroundColor = ConsoleColor.Cyan;
