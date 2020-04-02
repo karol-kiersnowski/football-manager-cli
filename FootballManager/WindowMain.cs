@@ -34,6 +34,7 @@ namespace FootballManager
 
             switch (selectedOption)
             {
+                case "exit": Program.isRunning = false; break;
                 case "q": Program.isRunning = false;    break;
                 case "0": isRunning = false;  break;
                 case "1": new WindowClubs(menu, Text.friendlyMatch).run(); break;

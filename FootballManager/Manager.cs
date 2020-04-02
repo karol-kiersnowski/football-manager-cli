@@ -53,7 +53,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                Window.displayMessage(e.Message);
+                Window.writeLine(e.Message);
             }
         }
     }

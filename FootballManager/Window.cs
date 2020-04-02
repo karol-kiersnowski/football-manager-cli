@@ -4,9 +4,19 @@ namespace FootballManager
 {
     public abstract class Window
     {
-        public static void displayMessage(string message)
+        public static ConsoleKeyInfo readKey()
         {
-            Console.WriteLine(message);
+            return Console.ReadKey();
+        }
+
+        public static void write(string text)
+        {
+            Console.Write(text);
+        }
+
+        public static void writeLine(string text)
+        {
+            Console.WriteLine(text);
         }
 
         public static void clear()
@@ -31,7 +41,7 @@ namespace FootballManager
             	}
 			}
 			catch(Exception e) {
-				displayMessage (e.Message);
+				writeLine (e.Message);
 				Console.ReadKey();
 			}
         }
@@ -47,6 +57,19 @@ namespace FootballManager
             if (position == Position.forward)
                 Console.ForegroundColor = ConsoleColor.Blue;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public Window()
         {
@@ -65,11 +88,17 @@ namespace FootballManager
 
 
 
+
+
+
+
+
+
         protected static readonly string logo =
               "____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____ \n" +
               "|___ |  | |  |  |  |__] |__| |    |       |\\/| |__| |\\ | |__| | __ |___ |__/ \n" +
               "|    |__| |__|  |  |__] |  | |___ |___    |  | |  | | \\| |  | |__] |___ |  \\ \n" +
-              "\t\t\t\t\t\t\t\t    v. 19.07";
+              "\t\t\t\t\t\t\t\t    v. 20.04";
 
         protected bool isRunning;
         protected string menu;
@@ -80,11 +109,6 @@ namespace FootballManager
         protected abstract void update();
         protected abstract void draw();
         protected abstract void selectOption();
-
-        protected void Write(string text)
-        {
-            Console.Write(text);
-        }
 
         protected void displayHeader()
         {
