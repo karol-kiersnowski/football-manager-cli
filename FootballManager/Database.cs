@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
+//using System.Data.SQLite;
 
 namespace FootballManager
 {
     class Database
     {
-        public static Database instance { get; private set; }
+        /*public static Database instance { get; private set; }
 
         public List<Club> clubs { get; private set; }
         public List<Club> clubsLeague1 { get; private set; }
@@ -252,6 +252,6 @@ namespace FootballManager
             {
                 Window.displayMessage(e.Message);
             }
-        }
+        }*/
     }
 }

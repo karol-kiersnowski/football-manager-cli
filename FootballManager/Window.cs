@@ -9,6 +9,11 @@ namespace FootballManager
             Console.WriteLine(message);
         }
 
+        public static void clear()
+        {
+            Console.Clear();
+        }
+
         public static void setTitle(string title)
         {
             Console.Title = title;
@@ -102,7 +107,7 @@ namespace FootballManager
             Console.WriteLine();
         }
 
-        protected void drawBlocks(int level)
+        public static void drawBlocks(int level)
         {
             char sign = '\u25A0';
             if (level < 20)

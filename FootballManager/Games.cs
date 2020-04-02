@@ -32,7 +32,7 @@ namespace FootballManager
             year = Year;
             season = year + "/" + (year + 1);
 
-            clubs = Database.instance.clubs;
+            clubs = CSVStreamer.instance.clubs;
 
             transferList = new List<Player>();
 

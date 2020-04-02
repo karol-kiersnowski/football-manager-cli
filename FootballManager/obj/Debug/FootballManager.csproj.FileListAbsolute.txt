@@ -44,10 +44,6 @@ C:/Users/Karol/Documents/Visual Studio 2013/Projects/FootballManager 2019.07.12/
 /opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/bin/Debug/FootballManager.exe.config
 /opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/bin/Debug/FootballManager.exe
 /opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/bin/Debug/FootballManager.pdb
-/opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/bin/Debug/System.Data.SQLite.dll
-/opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/bin/Debug/System.Data.SQLite.xml
-/opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/bin/Debug/System.Data.SQLite.dll.config
 /opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/obj/Debug/FootballManager.csprojAssemblyReference.cache
-/opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/obj/Debug/FootballManager.csproj.CopyComplete
 /opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/obj/Debug/FootballManager.exe
 /opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/obj/Debug/FootballManager.pdb

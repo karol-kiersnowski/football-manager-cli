@@ -63,10 +63,10 @@ namespace FootballManager
                 Console.Write(transferList[i].surname);
                 x += 14;
                 Console.SetCursorPosition(x, y + i);
-                for (int j = 0; j < Database.instance.clubs.Count; j++)
+                for (int j = 0; j < CSVStreamer.instance.clubs.Count; j++)
                 {
-                    if (Database.instance.clubs[j].id == transferList[i].clubId)
-                        Console.Write(Database.instance.clubs[j].fullName);
+                    if (CSVStreamer.instance.clubs[j].id == transferList[i].clubId)
+                        Console.Write(CSVStreamer.instance.clubs[j].fullName);
                 }
                 x += 23;
                 setColor(transferList[i].age, "wiek");
@@ -137,7 +137,7 @@ namespace FootballManager
                 {
                     selectedPlayer.isForSale = false;
                     transferList.Remove(selectedPlayer);
-                    new Transfer(selectedPlayer, Database.instance.clubs[1], club, selectedPlayer.value);
+                    new Transfer(selectedPlayer, CSVStreamer.instance.clubs[1], club, selectedPlayer.value);
                     selectedPlayer = null;
                     club.squad.setNumbers();
                     club.calculateSkills();

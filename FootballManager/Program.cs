@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SQLite;
 
 namespace FootballManager
 {
@@ -17,11 +12,11 @@ namespace FootballManager
             //Console.OutputEncoding = System.Text.Encoding.UTF8;
             isRunning = true;
             Window.setTitle("Football Manager");
-            Window.setDimensions(90, 30);
+            Window.setDimensions(80, 25);
             new WindowLanguage().run();
             new WindowLoading().run();
             new WindowMain().run();
-            Console.Clear();
+            Window.clear();
         }
     }
 }

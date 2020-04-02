@@ -8,14 +8,14 @@ namespace FootballManager
         {
             this.name = name;
             this.menu = menu + " >> " + name;
-            clubs = Database.instance.clubsLeague1.ToArray();
+            clubs = CSVStreamer.instance.clubsLeague1.ToArray();
         }
 
         public WindowClubs(string menu, Club host)
         {
             this.host = host;
             this.menu = menu + " >> " + host.fullName;
-            clubs = Database.instance.clubsLeague1.ToArray();
+            clubs = CSVStreamer.instance.clubsLeague1.ToArray();
         }
 
         protected override void draw()
