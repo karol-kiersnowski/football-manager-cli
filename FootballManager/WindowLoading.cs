@@ -8,7 +8,7 @@ namespace FootballManager
 
         protected override void draw()
         {
-			Console.Clear();
+            Console.Clear();
             Console.WriteLine(logo);
             Console.WriteLine(Text.loadingData);
         }

@@ -10,8 +10,8 @@ namespace FootballManager
             options[0] = "English";
             options[1] = "Polski";
             options[2] = "80x25";
-            options[3] = "90x30";
-            options[4] = "100x40";
+            options[3] = "80x28";
+            options[4] = "80x43";
         }
 
         protected override void update()
@@ -43,8 +43,8 @@ namespace FootballManager
                 case "1": new Text("English"); break;
                 case "2": new Text("Polish"); break;
                 case "3": setDimensions(80, 25); break;
-                case "4": setDimensions(90, 30); break;
-                case "5": setDimensions(100, 40); break;
+                case "4": setDimensions(80, 28); break;
+                case "5": setDimensions(80, 43); break;
             }
         }
     }

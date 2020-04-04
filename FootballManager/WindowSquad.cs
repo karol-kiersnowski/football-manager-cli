@@ -21,25 +21,24 @@ namespace FootballManager
         
         protected override void draw()
         {
-            Console.Clear();
+            int initialY = displayHeader();
+
             Console.BackgroundColor = ConsoleColor.DarkGreen;
-            pitch.draw(52, 6);
-            pitch.writeNumbers(52, 6, club);
+            pitch.draw(52, initialY);
+            pitch.writeNumbers(52, initialY, club);
             Console.ResetColor();
-            Console.SetCursorPosition(52, 23);
+
+            Console.SetCursorPosition(52, initialY + 17);
             Console.WriteLine(Text.tot + " - " + Text.total);
-            Console.SetCursorPosition(52, 24);
+            Console.SetCursorPosition(52, initialY + 18);
             Console.WriteLine(Text.gk + "  - " + Text.goalkeeping);
-            Console.SetCursorPosition(52, 25);
+            Console.SetCursorPosition(52, initialY + 19);
             Console.WriteLine(Text.plm + " - " + Text.playmaking);
-            Console.SetCursorPosition(52, 26);
+            Console.SetCursorPosition(52, initialY + 20);
             Console.WriteLine(Text.sho + " - " + Text.shooting);
-            Console.SetCursorPosition(0, 0);
-            Console.WriteLine(logo);
-            Console.WriteLine(menu);
 
             int x = 0;
-            int y = 6;
+            int y = initialY;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.number);
             x += 4;
@@ -82,7 +81,7 @@ namespace FootballManager
                 if (i == 11 && line == false)
                 {
                     Console.SetCursorPosition(0, y + i);
-                    Console.Write("------------------------------------------------");
+                    Console.Write("-------------------------------------------------");
                     line = true;
                     y++;
                     i--;

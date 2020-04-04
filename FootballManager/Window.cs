@@ -4,6 +4,9 @@ namespace FootballManager
 {
     public abstract class Window
     {
+        public static int width { get; private set; }
+        public static int height { get; private set; }
+
         public static ConsoleKeyInfo readKey()
         {
             return Console.ReadKey();
@@ -29,21 +32,24 @@ namespace FootballManager
             Console.Title = title;
         }
 
-        public static void setDimensions(int width, int height)
+        public static void setDimensions(int Width, int Height)
         {
-			try
-			{
-            	if (width <= Console.LargestWindowWidth && height <= Console.LargestWindowHeight)
-            	{
-                	Console.WindowWidth = width;
-                	Console.WindowHeight = height;
-                	Console.BufferWidth = width;
-            	}
-			}
-			catch(Exception e) {
-				writeLine (e.Message);
-				Console.ReadKey();
-			}
+            try
+            {
+                if (Width <= Console.LargestWindowWidth && Height <= Console.LargestWindowHeight)
+                {
+                    Console.WindowWidth = Width;
+                    Console.WindowHeight = Height;
+                    Console.BufferWidth = Width;
+                    width = Width;
+                    height = Height;
+                }
+            }
+            catch (Exception e)
+            {
+                writeLine(e.Message);
+                Console.ReadKey();
+            }
         }
 
         public static void setColor(Position position)
@@ -97,7 +103,7 @@ namespace FootballManager
         protected static readonly string logo =
               "____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____ \n" +
               "|___ |  | |  |  |  |__] |__| |    |       |\\/| |__| |\\ | |__| | __ |___ |__/ \n" +
-              "|    |__| |__|  |  |__] |  | |___ |___    |  | |  | | \\| |  | |__] |___ |  \\ \n" +
+              "|    |__| |__|  |  |__] |  | |___ |___    |  | |  | | \\| |  | |__] |___ |  \\\n" +
               "\t\t\t\t\t\t\t\t    v. 20.04";
 
         protected bool isRunning;
@@ -110,11 +116,20 @@ namespace FootballManager
         protected abstract void draw();
         protected abstract void selectOption();
 
-        protected void displayHeader()
+        protected int displayHeader()
         {
             Console.Clear();
-            Console.WriteLine(logo);
-            Console.WriteLine(menu + "\n");
+            if (height > 25)
+            {
+                Console.WriteLine(logo);
+                Console.WriteLine(menu + "\n");
+                return 6;
+            }
+            else
+            {
+                Console.WriteLine(menu + "\n");
+                return 2;
+            }
         }
 
         protected void displayOptionsWithoutNumbers()

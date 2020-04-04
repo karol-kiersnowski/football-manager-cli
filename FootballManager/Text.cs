@@ -289,8 +289,8 @@
                 previousMatch          = "Previous match: ";
 
                 // WINDOW SQUAD
-                toMakeSubstitution     = "To make a substitution, write nr of 1st player: ";
-                writeNrOf2Player       = "Write nr of 2nd player: ";
+                toMakeSubstitution     = "To make a substitution, write no. of 1st player: ";
+                writeNrOf2Player       = "Write no. of 2nd player: ";
 
                 // WINDOW TACTICS
                 formation              = "Formation";
@@ -476,8 +476,8 @@
                 previousMatch          = "Poprzedni mecz: ";
 
                 // WINDOW SQUAD
-                toMakeSubstitution     = "Aby dokonać zmiany, podaj numer pierwszego piłkarza: ";
-                writeNrOf2Player       = "Podaj numer drugiego piłkarza: ";
+                toMakeSubstitution     = "Aby dokonać zmiany, podaj nr 1-go piłkarza: ";
+                writeNrOf2Player       = "Podaj nr 2-go piłkarza: ";
 
                 // WINDOW TACTICS
                 formation              = "Formacja";

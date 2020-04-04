@@ -1,22 +1,15 @@
 ﻿<Properties StartupConfiguration="{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|Default">
   <MonoDevelop.Ide.ItemProperties.FootballManager PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FootballManager/WindowMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FootballManager/Window.cs">
     <Files>
-      <File FileName="FootballManager/CSVStreamer.cs" Line="124" Column="64" />
-      <File FileName="FootballManager/Database.cs" Line="255" Column="12" />
-      <File FileName="FootballManager/Program.cs" Line="15" Column="40" />
-      <File FileName="FootballManager/Window.cs" Line="111" Column="48" />
-      <File FileName="FootballManager/Generator.cs" Line="31" Column="32" />
-      <File FileName="FootballManager/WindowAboutGame.cs" Line="26" Column="50" />
-      <File FileName="FootballManager/WindowLanguage.cs" Line="32" Column="24" />
-      <File FileName="FootballManager/WindowMain.cs" Line="37" Column="56" />
+      <File FileName="FootballManager/Window.cs" Line="122" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FootballManager" expanded="True">
             <Node name="FootballManager" expanded="True">
-              <Node name="WindowMain.cs" selected="True" />
+              <Node name="Window.cs" selected="True" />
             </Node>
           </Node>
         </State>

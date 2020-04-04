@@ -20,11 +20,11 @@ namespace FootballManager
 
         protected override void draw()
         {
-            displayHeader();
+            int initialY = displayHeader();
 
-            Console.Write(Text.league + ": 1");
+            //Console.Write(Text.league + ": 1");
             int x = 0;
-            int y = 8;
+            int y = initialY;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.number);
             x += 4;

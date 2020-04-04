@@ -27,9 +27,9 @@ namespace FootballManager
 
         protected override void draw()
         {
-            displayHeader();
+            int initialY = displayHeader();
             displayOptions();
-            displayInformationsAboutClub(25, 6);
+            displayInformationsAboutClub(25, initialY);
             Console.WriteLine();
         }
 
