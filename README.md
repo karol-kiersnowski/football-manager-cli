@@ -1,6 +1,6 @@
 Football Manager CLI
 ====================
-Football manager is a simple game written in C# - Console Application. Previously it used the SQLite library. Now the data is stored in CSV files.
+Football manager is a simple game written in C# - Console Application. Previously it used the SQL. Now the data is stored in CSV files.
 
 Project site - [karol-kiersnowski.prv.pl/#football-manager-cli](http://karol-kiersnowski.prv.pl/#football-manager-cli)
 
