@@ -87,7 +87,7 @@
     <Compile Include="WindowMain.cs" />
     <Compile Include="WindowManagerMode.cs" />
     <Compile Include="WindowMatch.cs" />
-    <Compile Include="WindowOptions.cs" />
+    <Compile Include="WindowSettings.cs" />
     <Compile Include="WindowSaving.cs" />
     <Compile Include="WindowSquad.cs" />
     <Compile Include="WindowStadium.cs" />

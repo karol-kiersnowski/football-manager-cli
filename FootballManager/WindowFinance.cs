@@ -13,13 +13,13 @@ namespace FootballManager
 
         protected override void draw()
         {
-            displayHeader();
+            int initialY = displayHeader();
 
             Console.Write(Text.week + Games.instance.polishLeague1.nrRound + ".");
             Console.Write("\t\t" + Text.money + "{0:n0} ({1:n0})", finance.money, finance.moneyFromPreviousWeek);
 
             int x = 0;
-            int y = 8;
+            int y = initialY + 2;
 
             Console.SetCursorPosition(x, y);
             Console.Write("{0,-10} {1,7:n0}", Text.ingoing, finance.ingoing);
@@ -28,13 +28,13 @@ namespace FootballManager
             Console.Write("{0,-10} {1,7:n0}", Text.tickets, finance.tickets);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.sponsors, finance.sponsors);
+           Console.Write("{0,-10} {1,7:n0}", Text.sponsors, finance.sponsors);
             y++;
             Console.SetCursorPosition(x, y);
             Console.Write("{0,-10} {1,7:n0}", Text.transfers, finance.saleOfPlayers);
 
             x += 25;
-            y = 8;
+            y = initialY + 2;
             Console.SetCursorPosition(x, y);
             Console.Write("{0,-10} {1,7:n0}", Text.outgoing, finance.outgoing);
             y++;
@@ -44,11 +44,11 @@ namespace FootballManager
             Console.SetCursorPosition(x, y);
             Console.Write("{0,-10} {1,7:n0}", Text.salaries, finance.salaries);
             y++;
-            Console.SetCursorPosition(x, y);
+           Console.SetCursorPosition(x, y);
             Console.Write("{0,-10} {1,7:n0}", Text.transfers, finance.purchaseOfPlayers);
 
             x = 0;
-            y = 13;
+            y = initialY + 7;
             Console.SetCursorPosition(x, y);
             Console.Write("{0,-10} {1,7:n0}", Text.balance, finance.balance);
         }

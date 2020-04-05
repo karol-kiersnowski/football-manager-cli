@@ -13,22 +13,22 @@ namespace FootballManager
 
         protected override void draw()
         {
-            displayHeader();
+            initialY = displayHeader();
 
             if (selectedNumber > 0 && selectedNumber <= 30)
                 Console.Write(round.name);
 
             int x = 0;
-            int y = 8;
+            int y = initialY + 2;
 
             Console.SetCursorPosition(x, y);
             Console.Write(Text.number);
             x += 4;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.host);
+           Console.Write(Text.host);
             x += 23;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.score);
+           Console.Write(Text.score);
             x += 6;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.guest);
@@ -53,11 +53,12 @@ namespace FootballManager
 
         protected override void selectOption()
         {
-            Console.SetCursorPosition(15, 6);
+            Console.SetCursorPosition(15, initialY);
             Console.Write(Text.selectRound);
             selectedOption = Console.ReadLine();
-            if (selectedOption == "q") Program.isRunning = false;
-            if (selectedOption == "0") isRunning = false;
+
+            checkBasicOptions();
+
             int.TryParse(selectedOption, out selectedNumber);
             if (selectedNumber > 0 && selectedNumber <= 30)
                 round = Games.instance.polishLeague1.rounds[selectedNumber - 1];
@@ -69,5 +70,6 @@ namespace FootballManager
         }
 
         Round round;
+        int initialY;
     }
 }

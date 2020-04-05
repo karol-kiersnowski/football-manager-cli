@@ -39,7 +39,7 @@ namespace FootballManager
 
         protected override void selectOption()
         {
-            Console.Write(Text.selection);
+           Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
             if (selectedOption == "q") Program.isRunning = false;
             if (int.TryParse(selectedOption, out selectedNumber))

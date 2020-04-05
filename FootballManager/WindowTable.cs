@@ -18,16 +18,16 @@ namespace FootballManager
 
         protected override void draw()
         {
-            displayHeader();
+            int initialY = displayHeader();
             Console.WriteLine(Text.league + ": " + Games.instance.playerLeague.name);
 
             int x = 0;
-            int y = 8;
+            int y = initialY + 2;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.positionAbbr);
+           Console.Write(Text.positionAbbr);
             x += 5;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.club);
+           Console.Write(Text.club);
             x += 23;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.played);
@@ -50,7 +50,7 @@ namespace FootballManager
             Console.SetCursorPosition(x, y);
             Console.Write("G+/-");
             x += 5;
-            Console.SetCursorPosition(x, y);
+           Console.SetCursorPosition(x, y);
             Console.Write(Text.points);
 
             for (int i = 0; i < table.clubs.Length; i++)

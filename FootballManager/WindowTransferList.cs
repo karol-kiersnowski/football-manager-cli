@@ -14,18 +14,18 @@ namespace FootballManager
         
         protected override void draw()
         {
-            displayHeader();
+            int initialY = displayHeader();
 
             int x = 0;
-            int y = 6;
+            int y = initialY;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.number);
             x += 4;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.player);
+           Console.Write(Text.player);
             x += 14;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.club);
+           Console.Write(Text.club);
             x += 23;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.age);
@@ -42,12 +42,12 @@ namespace FootballManager
             Console.SetCursorPosition(x, y);
             Console.Write(Text.plm);
             x += 4;
-            Console.SetCursorPosition(x, y);
+           Console.SetCursorPosition(x, y);
             Console.Write(Text.sho);
             x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.sta);
-            x += 4;
+           x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.value);
 

@@ -4,7 +4,15 @@ namespace FootballManager
 {
     class CupWithGroupStage
     {
-        public static readonly string[] rounds = { Text.groupStage, Text._1_8Final, Text._1_4Final, Text._1_2Final, Text.final, Text.finished };
+        public static readonly string[] rounds =
+        {
+            Text.groupStage,
+            Text._1_8Final,
+            Text._1_4Final,
+            Text._1_2Final,
+            Text.final,
+            Text.finished
+        };
 
         public string name { get; private set; }
         public Club[] clubs { get; private set; }

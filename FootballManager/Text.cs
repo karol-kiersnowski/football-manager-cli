@@ -35,7 +35,7 @@
         public static string loadManagerMode        { get; private set; }
         public static string generateData           { get; private set; }
         public static string aboutGame              { get; private set; }
-        public static string options                { get; private set; }
+        public static string settings               { get; private set; }
         public static string exit                   { get; private set; }
 
         // WINDOW GENERATOR
@@ -49,7 +49,7 @@
         public static string license { get; private set; }
         public static string author { get; private set; }
 
-        // WINDOW OPTIONS
+        // WINDOW SETTINGS
         public static string language               { get; private set; }
         public static string widthAndHeightOfWindow { get; private set; }
 
@@ -221,7 +221,7 @@
                 loadManagerMode        = "Load a manager mode";
                 generateData           = "Generate new data";
                 aboutGame              = "About game";
-                options                = "Options";
+                settings                = "Settings";
                 exit                   = "Exit";
 
                 // WINDOW GENERATOR
@@ -235,7 +235,7 @@
                 license                 = "License";
                 author                  = "Author";
 
-                // WINDOW OPTIONS
+                // WINDOW SETTINGS
                 language               = "Language";
                 widthAndHeightOfWindow = "Width and height of window";
 
@@ -407,7 +407,7 @@
                 loadManagerMode        = "Wczytaj tryb menedżera";
                 generateData           = "Generuj nowe dane";
                 aboutGame              = "O grze";
-                options                = "Opcje";
+                settings                = "Ustawienia";
                 exit                   = "Wyjście";
 
                 // WINDOW GENERATOR
@@ -421,13 +421,13 @@
                 license                 = "Licencja";
                 author                  = "Autor";
 
-                // WINDOW OPTIONS
+                // WINDOW SETTINGS
                 language               = "Język";
                 widthAndHeightOfWindow = "Szerokość i wysokość okna";
 
                 // WINDOW CLUBS, STADIUMS
                 league                 = "Liga";
-                number              = "Nr";
+                number                = "Nr";
                 name                   = "Nazwa";
                 total                  = "Sum";
                 attack                 = "Atak";

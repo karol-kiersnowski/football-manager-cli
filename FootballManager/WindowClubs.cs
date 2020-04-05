@@ -35,10 +35,10 @@ namespace FootballManager
             //Console.Write(Text.total);
             //x += 7;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.attack);
+           Console.Write(Text.attack);
             x += 7;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.middle);
+           Console.Write(Text.middle);
             x += 7;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.defense);
@@ -74,11 +74,8 @@ namespace FootballManager
         {
             Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
-            switch (selectedOption)
-            {
-                case "q": Program.isRunning = false; break;
-                case "0": isRunning = false; break;
-            }
+
+            checkBasicOptions();
 
             if (int.TryParse(selectedOption, out selectedNumber))
             {
@@ -88,7 +85,7 @@ namespace FootballManager
                     {
                         if (selectedNumber == i)
                             new WindowManagerMode(menu, clubs[i - 1]).run();
-                    }
+                   }
                 }
                 else if (name == Text.friendlyMatch)
                 {

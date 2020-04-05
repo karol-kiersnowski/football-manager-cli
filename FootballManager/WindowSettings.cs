@@ -2,9 +2,9 @@
 
 namespace FootballManager
 {
-    class WindowOptions : Window
+    class WindowSettings : Window
     {
-        public WindowOptions(string menu)
+        public WindowSettings(string menu)
         {
             options = new string[5];
             options[0] = "English";
@@ -16,7 +16,7 @@ namespace FootballManager
 
         protected override void update()
         {
-            menu = ">> Menu >> " + Text.options;
+            menu = ">> Menu >> " + Text.settings;
         }
 
         protected override void draw()
@@ -36,10 +36,11 @@ namespace FootballManager
         {
             Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
+
+            checkBasicOptions();
+
             switch (selectedOption)
             {
-                case "q": Program.isRunning = false; break;
-                case "0": isRunning = false; break;
                 case "1": new Text("English"); break;
                 case "2": new Text("Polish"); break;
                 case "3": setDimensions(80, 25); break;

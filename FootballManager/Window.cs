@@ -146,6 +146,16 @@ namespace FootballManager
             Console.WriteLine();
         }
 
+        protected void checkBasicOptions()
+        {
+            if (selectedOption == "0")          isRunning = false;
+            if (selectedOption == "cd..")       isRunning = false;
+            if (selectedOption == "cd ..")      isRunning = false;
+            if (selectedOption == "exit")       Program.isRunning = false;
+            if (selectedOption == "ver")        new WindowAboutGame(menu).run();
+            if (selectedOption == "settings")   new WindowSettings(menu).run();
+        }
+
         public static void drawBlocks(int level)
         {
             char sign = '\u25A0';

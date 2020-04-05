@@ -10,8 +10,8 @@ namespace FootballManager
             this.menu = menu + " >> " + Text.training;
             options = new string[5];
             options[0] = Text.intensity;
-            options[1] = Text.fitness;
-            options[2] = Text.playmakingDefensive;
+           options[1] = Text.fitness;
+           options[2] = Text.playmakingDefensive;
             options[3] = Text.shootingGoalkeeping;
             options[4] = Text.setPieces;
         }

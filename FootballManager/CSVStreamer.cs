@@ -258,10 +258,10 @@ namespace FootballManager
             //Console.Write(Text.total);
             //x += 7;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.attack);
+           Console.Write(Text.attack);
             x += 7;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.middle);
+           Console.Write(Text.middle);
             x += 7;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.defense);
@@ -325,10 +325,10 @@ namespace FootballManager
         {
             int x = 0;
             int y = 3;
-            Console.SetCursorPosition(x, y);
+           Console.SetCursorPosition(x, y);
             Console.Write(Text.number);
             x += 4;
-            Console.SetCursorPosition(x, y);
+           Console.SetCursorPosition(x, y);
             Console.Write(Text.name);
             x += 23;
 

@@ -33,12 +33,12 @@ namespace FootballManager
                         Console.WriteLine(Text.confirmation);
                     }
                     else
-                        Console.WriteLine(Text.error);
+                       Console.WriteLine(Text.error);
                     Console.ReadKey();
                     isRunning = false;
                     break;
                 case "n":
-                    Console.WriteLine(Text.failure);
+                   Console.WriteLine(Text.failure);
                     Console.ReadKey();
                     isRunning = false;
                     break;

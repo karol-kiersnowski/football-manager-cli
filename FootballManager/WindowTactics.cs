@@ -12,9 +12,9 @@ namespace FootballManager
             this.menu = menu + " >> " + Text.tactics;
             options = new string[6];
             options[0] = Text.formation;
-            options[1] = Text.posture;
+           options[1] = Text.posture;
             options[2] = "Pressing";
-            options[3] = Text.agression;
+           options[3] = Text.agression;
             options[4] = Text.captain;
             options[5] = Text.setPieces;
 
@@ -26,15 +26,13 @@ namespace FootballManager
 
         protected override void draw()
         {
-            Console.Clear();
+            int initialY = displayHeader();
             Console.BackgroundColor = ConsoleColor.DarkGreen;
-            pitch.draw(50, 6);
-            pitch.writeNumbers(50, 6, club);
+            pitch.draw(50, initialY);
+            pitch.writeNumbers(50, initialY, club);
             Console.ResetColor();
 
-            Console.SetCursorPosition(0, 0);
-            Console.WriteLine(logo);
-            Console.WriteLine(menu + "\n");
+            Console.SetCursorPosition(0, initialY);
 
             string taktyka;
 
@@ -100,7 +98,7 @@ namespace FootballManager
 
         protected override void selectOption()
         {
-            //Console.WriteLine("selected1Number: " + selected1Number);
+            //Console.WriteLine("selected1Number " + selected1Number);
             Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
             if (selectedOption == "q") Program.isRunning = false;

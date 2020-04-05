@@ -18,14 +18,14 @@ namespace FootballManager
         {
             displayHeader();
 
-            if (Text.selectedLanguage == "English")
+           if (Text.selectedLanguage == "English")
                 Console.Write("Football Manager is a simple text game. We can become the manager of a football club and manage it in game seasons.\n\n");
-            if (Text.selectedLanguage == "Polish")
+           if (Text.selectedLanguage == "Polish")
                 Console.Write("Football Manager jest prostą grą tekstową, w której możemy stać się menedżerem klubu piłkarskiego i prowadzić go w rozgrywkach.\n\n");
             
-            Console.Write(Text.version + ": 20.04\n");
-            Console.Write(Text.license + ": GNU General Public License v3.0\n");
-            Console.Write(Text.author + ": Karol Kiersnowski");
+           Console.WriteLine(Text.version + ": 20.04");
+            Console.WriteLine(Text.license + ": GNU General Public Licnse v3.0");
+            Console.WriteLine(Text.author + ": Karol Kiersnowski");
         }
 
         protected override void selectOption()

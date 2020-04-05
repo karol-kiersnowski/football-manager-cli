@@ -10,18 +10,16 @@ namespace FootballManager
             this.menu = menu + " >> " + Text.transfers;
             options = new string[3];
             options[0] = Text.displayPlayerOnTransferList;
-            options[1] = Text.browseTransferList;
-            options[2] = Text.browsePlayersOfClubs;
+           options[1] = Text.browseTransferList;
+           options[2] = Text.browsePlayersOfClubs;
         }
 
         protected override void draw()
         {
-            Console.Clear();
-            Console.SetCursorPosition(45, 6);
+            int intialY = displayHeader();
+            Console.SetCursorPosition(45, intialY);
             Console.WriteLine(Text.money + "{0:n0}", club.finance.money);
-            Console.SetCursorPosition(0, 0);
-            Console.WriteLine(logo);
-            Console.WriteLine(menu + "\n");
+            Console.SetCursorPosition(0, intialY + 1);
             displayOptions();
         }
 

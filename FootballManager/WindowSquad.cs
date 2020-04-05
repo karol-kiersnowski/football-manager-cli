@@ -31,9 +31,9 @@ namespace FootballManager
             Console.SetCursorPosition(52, initialY + 17);
             Console.WriteLine(Text.tot + " - " + Text.total);
             Console.SetCursorPosition(52, initialY + 18);
-            Console.WriteLine(Text.gk + "  - " + Text.goalkeeping);
+           Console.WriteLine(Text.gk + "  - " + Text.goalkeeping);
             Console.SetCursorPosition(52, initialY + 19);
-            Console.WriteLine(Text.plm + " - " + Text.playmaking);
+           Console.WriteLine(Text.plm + " - " + Text.playmaking);
             Console.SetCursorPosition(52, initialY + 20);
             Console.WriteLine(Text.sho + " - " + Text.shooting);
 
@@ -41,7 +41,7 @@ namespace FootballManager
             int y = initialY;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.number);
-            x += 4;
+           x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.player);
             x += 17;
@@ -49,8 +49,7 @@ namespace FootballManager
             Console.Write("P");
             x += 2;
             //Console.SetCursorPosition(x, y);
-            //Console.Write(Text.tot);
-            //x += 5;
+            //Console.Write(Text.tot);            //x += 5;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.age);
             x += 4;
@@ -64,7 +63,7 @@ namespace FootballManager
             Console.Write(Text.plm);
             x += 4;
             Console.SetCursorPosition(x, y);
-            Console.Write(Text.sho);
+           Console.Write(Text.sho);
             x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.sta);
@@ -186,7 +185,7 @@ namespace FootballManager
                     Console.WriteLine("\nilość zmian: " + match.substitutesHost.Count);
                 if (club == match.guest)
                     Console.WriteLine("\nilość zmian: " + match.substitutesGuest.Count);
-            }
+           }
             if (nr1 == -1)
                 Console.Write("\n\n" + Text.toMakeSubstitution);
             else if (nr2 == -1)

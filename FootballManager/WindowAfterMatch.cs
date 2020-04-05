@@ -38,7 +38,7 @@ namespace FootballManager
             y++;
             Console.SetCursorPosition(x, y);
             Console.WriteLine("{0,-16} {1,-16} {2,16}",
-                match.attackForceHost + "%", Text.attackForce, match.attackForceGuest + "%");
+                match.attackForceHost +"%", Text.attackForce, match.attackForceGuest + "%");
         }
 
         void displaySquads(int x, int y)

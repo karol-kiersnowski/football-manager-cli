@@ -74,9 +74,9 @@ namespace FootballManager
                 Console.WriteLine(logo);
                 Console.WriteLine(menu + "\n");
                 if (timer.Interval == 1000)
-                    Console.WriteLine("1. " + Text.boost);
+                   Console.WriteLine("1. " + Text.boost);
                 if (timer.Interval == 100)
-                    Console.WriteLine("1. " + Text.slow);
+                   Console.WriteLine("1. " + Text.slow);
                 Console.WriteLine("2. " + Text.squad);
                 Console.WriteLine("3. " + Text.tactics);
 
@@ -107,7 +107,7 @@ namespace FootballManager
                 match.host.fullName, match.result, match.guest.fullName);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.WriteLine("| {0,-16} {1,-16} {2,17}",
+            Console.WriteLine("| {0,-1} {1,-16} {2,17}",
                 match.ballPossessionHost + "%", Text.ballPossession, match.ballPossessionGuest + "%");
             y++;
             Console.SetCursorPosition(x, y);
@@ -241,9 +241,8 @@ namespace FootballManager
         {
             Console.SetCursorPosition(x, y);
             Console.Write(Text.minute + match.actions[minute].minute + "  |  ");
-            if (match.actions[minute].ballPossession == EClub.host)
-                Console.WriteLine(Text.ballIsPossessedBy + match.host.fullName);
-            if (match.actions[minute].ballPossession == EClub.guest)
+           if (match.actions[minute].ballPossession == EClub.host)
+                Console.WriteLine(Text.ballIsPossessedBy + match.host.fullName);            if (match.actions[minute].ballPossession == EClub.guest)
                 Console.WriteLine(Text.ballIsPossessedBy + match.guest.fullName);
 
             for (int i = 89; i >= 0; i--)

@@ -9,8 +9,8 @@ namespace FootballManager
             this.menu = menu + " >> " + Text.statistics;
             options = new string[4];
             options[0] = Text.leagueTable;
-            options[1] = Text.topScorers;
-            options[2] = Text.leagueFixtures;
+           options[1] = Text.topScorers;
+           options[2] = Text.leagueFixtures;
             options[3] = Text.clubFixtures;
         }
 

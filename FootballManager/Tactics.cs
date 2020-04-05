@@ -3,8 +3,8 @@
     class Tactics
     {
         public static readonly string[] formations = { "5-4-1", "5-3-2", "4-5-1", "4-4-2", "4-3-3", "3-5-2", "3-4-3" };
-        public static readonly string[] postures = { Text.veryDefensive, Text.defensive, Text.neutral, Text.offensive, Text.veryOffensive };
-        public static readonly string[] levels = { Text.veryWeak, Text.weak, Text.normal, Text.strong, Text.veryStrong };
+        public static readonly string[] postures = { Text.veryDefensive, Text.defensive,Text.neutral, Text.offensive, Text.veryOffensive };
+        public static readonly string[] levels ={ Text.veryWeak, Text.weak, Text.normal, Text.strong, Text.veryStrong };
 
         //Klub druzyna;
         public string formation { get; private set; }
