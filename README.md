@@ -1,8 +1,6 @@
 Football Manager CLI
 ====================
-Football manager is a simple game written in C# - Console Application. Previously it used the SQL. Now the data is stored in CSV files.
-
-Project site - [karol-kiersnowski.prv.pl/#football-manager-cli](http://karol-kiersnowski.prv.pl/#football-manager-cli)
+Football Manager CLI is a simple game written in C# - Console Application. Previously it used the SQL. Now the data is stored in CSV files.
 
 Technologies
 ------------
@@ -21,7 +19,7 @@ Windows (7 / 8 / 10) or GNU Linux (Wine / Mono)
 
 Screenshots
 -----------
-![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/projects/football-manager-cli.png)
+![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/img/projects/football-manager-cli.png)
 
 Author
 ------
