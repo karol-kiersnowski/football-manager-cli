@@ -180,7 +180,7 @@ namespace FootballManager
             }
         }
 
-        public static void drawBlocks(int level)
+        protected void drawBlocks(int level)
         {
             char sign = '\u25A0';
             if (level < 20)

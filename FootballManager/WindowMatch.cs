@@ -70,9 +70,7 @@ namespace FootballManager
             {
                 match.playAction(minute);
 
-                Console.Clear();
-                Console.WriteLine(logo);
-                Console.WriteLine(menu + "\n");
+                int initialY = displayHeader();
                 if (timer.Interval == 1000)
                    Console.WriteLine("1. " + Text.boost);
                 if (timer.Interval == 100)
@@ -80,10 +78,10 @@ namespace FootballManager
                 Console.WriteLine("2. " + Text.squad);
                 Console.WriteLine("3. " + Text.tactics);
 
-                displayStatistics(23, 6);
-                displaySquadsAndEvents(0, 10);
-                displaySubstitutes(0, 23);
-                //displayRelation(0, 28);
+                displayStatistics(23, initialY);
+                displaySquadsAndEvents(0, initialY + 4);
+                displaySubstitutes(0, initialY + 19);
+                //displayRelation(0, initialY + 22);
                 Console.WriteLine("Host attack: " + match.host.attack);
                 Console.WriteLine("Guest attack: " + match.guest.attack);
                 Console.WriteLine("Host attack: " + match.host.attack);
