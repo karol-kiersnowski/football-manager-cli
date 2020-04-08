@@ -192,8 +192,7 @@ namespace FootballManager
                 Console.Write("\n\n" + Text.writeNrOf2Player);
 
             selectedOption = Console.ReadLine();
-            if (selectedOption == "q")
-                Program.isRunning = false;
+            checkBasicOptions();
             if (int.TryParse(selectedOption, out selectedNumber))
             {
                 if (selectedNumber == 0)

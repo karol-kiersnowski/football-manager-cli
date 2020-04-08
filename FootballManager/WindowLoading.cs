@@ -14,7 +14,7 @@ namespace FootballManager
 
         protected override void selectOption()
         {
-            new CSVStreamer();
+            new DataCSV();
         }
 
         protected override void update()

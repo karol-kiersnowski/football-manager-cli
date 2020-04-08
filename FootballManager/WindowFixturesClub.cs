@@ -51,11 +51,9 @@ namespace FootballManager
         {
             Console.Write(Text.selectMatch);
             selectedOption = Console.ReadLine();
-            if (selectedOption == "q") Program.isRunning = false;
+            checkBasicOptions();
             if (int.TryParse(selectedOption, out selectedNumber))
             {
-                if (selectedNumber == 0)
-                    isRunning = false;
                 if (selectedNumber > 0 && selectedNumber <= 30)
                     new WindowAfterMatch(menu, matches[selectedNumber - 1]).run();
             }

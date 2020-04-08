@@ -2,7 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.FootballManager PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="FootballManager/Window.cs">
     <Files>
-      <File FileName="FootballManager/Window.cs" Line="155" Column="81" />
+      <File FileName="FootballManager/Window.cs" Line="169" Column="17" />
+      <File FileName="FootballManager/WindowLanguage.cs" Line="37" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

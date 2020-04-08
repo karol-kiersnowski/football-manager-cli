@@ -27,10 +27,9 @@ namespace FootballManager
         {
             Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
-            switch(selectedOption)
+            checkBasicOptions();
+            switch (selectedOption)
             {
-                case "q": Program.isRunning = false; break;
-                case "0": isRunning = false; break;
                 case "1": new WindowTransfersSales(menu, club).run(); break;
                 case "2": new WindowTransferList(menu, club).run(); break;
             }

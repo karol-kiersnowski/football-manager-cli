@@ -7,6 +7,7 @@ namespace FootballManager
         public static int width { get; private set; }
         public static int height { get; private set; }
 
+        // USES CONSOLE CLASS
         public static ConsoleKeyInfo readKey()
         {
             return Console.ReadKey();
@@ -47,8 +48,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                writeLine(e.Message);
-                Console.ReadKey();
+                displayMessage(e.Message);
             }
         }
 
@@ -64,7 +64,18 @@ namespace FootballManager
                 Console.ForegroundColor = ConsoleColor.Blue;
         }
 
+        // END USES CONSOLE CLASS
 
+
+
+        public static void displayMessage(string text)
+        {
+            clear();
+            writeLine(logo);
+            writeLine(">> Error\n");
+            writeLine(text);
+            readKey();
+        }
 
 
 
@@ -118,7 +129,7 @@ namespace FootballManager
 
         protected int displayHeader()
         {
-            Console.Clear();
+            clear();
             if (height > 24)
             {
                 Console.WriteLine(logo);
@@ -148,12 +159,25 @@ namespace FootballManager
 
         protected void checkBasicOptions()
         {
-            if (selectedOption == "0")          isRunning = false;
-            if (selectedOption == "cd..")       isRunning = false;
-            if (selectedOption == "cd ..")      isRunning = false;
-            if (selectedOption == "exit")       Program.isRunning = false;
-            if (selectedOption == "ver")        new WindowAboutGame(menu).run();
-            if (selectedOption == "settings")   new WindowSettings(menu).run();
+            switch (selectedOption)
+            {
+                case "0":
+                case "cd..":
+                case "cd ..":
+                    isRunning = false;
+                    break;
+                case "q":
+                case "quit":
+                case "exit":
+                    Program.isRunning = false;
+                    break;
+                case "ver":
+                    new WindowAboutGame(menu).run();
+                    break;
+                case "settings":
+                    new WindowSettings(menu).run();
+                    break;
+            }
         }
 
         public static void drawBlocks(int level)
@@ -169,19 +193,6 @@ namespace FootballManager
                 Console.Write("{0}{1}{2}{3}", sign, sign, sign, sign);
             else if (level < 100)
                 Console.Write("{0}{1}{2}{3}{4}", sign, sign, sign, sign, sign);
-        }
-
-        protected void draw4Blocks(int level)
-        {
-            char sign = '\u25A0';
-            if (level < 20)
-                Console.Write("{0}", sign);
-            else if (level < 50)
-                Console.Write("{0}{1}", sign, sign);
-            else if (level < 80)
-                Console.Write("{0}{1}{2}", sign, sign, sign);
-            else if (level < 100)
-                Console.Write("{0}{1}{2}{3}", sign, sign, sign, sign);
         }
     }
 }

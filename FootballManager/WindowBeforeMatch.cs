@@ -41,12 +41,11 @@ namespace FootballManager
         {
            Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
-            if (selectedOption == "q") Program.isRunning = false;
+            checkBasicOptions();
             if (int.TryParse(selectedOption, out selectedNumber))
             {
                 switch (selectedNumber)
                 {
-                    case 0: isRunning = false; break;
                     case 1: new WindowMatch(menu, new Match(host, guest, TypeOfMatch.friendly)).run(); break;
                     case 2: new WindowSquad(menu, host, null).run(); break;
                     case 3: new WindowTactics(menu, host, null).run(); break;

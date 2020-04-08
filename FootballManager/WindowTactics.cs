@@ -101,7 +101,7 @@ namespace FootballManager
             //Console.WriteLine("selected1Number " + selected1Number);
             Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
-            if (selectedOption == "q") Program.isRunning = false;
+            checkBasicOptions();
 
             if (int.TryParse(selectedOption, out selectedNumber))
             {

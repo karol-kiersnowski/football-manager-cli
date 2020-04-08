@@ -31,9 +31,7 @@ namespace FootballManager
         {
             Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
-
             checkBasicOptions();
-
             switch (selectedOption)
             {
                 case "1": new WindowClubs(menu, Text.friendlyMatch).run(); break;

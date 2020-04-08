@@ -4,23 +4,24 @@ using System.IO;
 
 namespace FootballManager
 {
-    class CSVStreamer
+    abstract class Data
     {
-        public static CSVStreamer instance { get; private set; }
+        public static Data instance { get; private set; }
 
-        public List<Club> clubs { get; private set; }
-        public List<Club> clubsLeague1 { get; private set; }
-        public List<Club> clubsLeague2 { get; private set; }
-        public List<Manager> managers { get; private set; }
-        public List<Player> players { get; private set; }
+        public List<Club> clubs { get; protected set; }
+        public List<Club> clubsLeague1 { get; protected set; }
+        public List<Club> clubsLeague2 { get; protected set; }
+        public List<Manager> managers { get; protected set; }
+        public List<Player> players { get; protected set; }
 
-        public CSVStreamer()
+        public Data()
         {
             instance = this;
 
             clubsLeague1 = new List<Club>(16);
             clubsLeague2 = new List<Club>(16);
 
+            openConnection();
             loadClubs();
             loadManagers();
             loadPlayers();
@@ -36,122 +37,10 @@ namespace FootballManager
             }
         }
 
-        int getRowsCount(string fileName)
-        {
-            int rowsCount = 0;
-            using (StreamReader reader = new StreamReader(fileName))
-            {
-                while (reader.ReadLine() != null)
-                {
-                    rowsCount++;
-                }
-            }
-            return rowsCount - 1;
-        }
-
-        void loadClubs()
-        {
-            string fileName = "data/clubs.csv";
-            clubs = new List<Club>(getRowsCount(fileName));
-
-            using (StreamReader reader = new StreamReader(fileName))
-            {
-                for (int i = 0; i < clubs.Capacity + 1; i++)
-                {
-                    string[] cols = reader.ReadLine().Split(',');
-                    if (i == 0)
-                        continue;
-                        
-                    clubs.Add(new Club(
-                        int.Parse(cols[0]),
-                        int.Parse(cols[0]) + 1,
-                        cols[1],
-                        cols[2],
-                        cols[3],
-                        int.Parse(cols[4]),
-                        new Tactics(
-                            cols[5],
-                            cols[6],
-                            cols[7],
-                            cols[8],
-                            int.Parse(cols[9]),
-                            int.Parse(cols[10])
-                            ),
-                        new StatisticsClub(
-                            int.Parse(cols[11]),
-                            int.Parse(cols[12]),
-                            int.Parse(cols[13]),
-                            int.Parse(cols[14]),
-                            int.Parse(cols[15]),
-                            int.Parse(cols[16]),
-                            int.Parse(cols[17]),
-                            int.Parse(cols[18]),
-                            int.Parse(cols[19])
-                            )
-                        ));
-                }
-            }
-        }
-
-        void loadManagers()
-        {
-            string fileName = "data/managers.csv";
-            managers = new List<Manager>(getRowsCount(fileName));
-
-            using (StreamReader reader = new StreamReader(fileName))
-            {
-                for (int i = 0; i < managers.Capacity + 1; i++)
-                {
-                    string[] cols = reader.ReadLine().Split(',');
-                    if (i == 0)
-                        continue;
-
-                    managers.Add(new Manager(
-                        int.Parse(cols[0]),
-                        cols[1],
-                        cols[2],
-                        int.Parse(cols[3]),
-                        int.Parse(cols[4]),
-                        int.Parse(cols[5])
-                    ));
-                }
-            }
-        }
-
-        void loadPlayers()
-        {
-            string fileName = "data/players.csv";
-            players = new List<Player>(getRowsCount(fileName));
-
-            using (StreamReader reader = new StreamReader(fileName))
-            {
-                for (int i = 0; i < players.Capacity + 1; i++)
-                {
-                    string[] cols = reader.ReadLine().Split(',');
-                    if (i == 0)
-                        continue;
-
-                    players.Add(new Player(
-                        int.Parse(cols[0]),
-                        cols[1],
-                        cols[2],
-                        int.Parse(cols[3]),
-                        int.Parse(cols[4]),
-                        int.Parse(cols[5]),
-                        int.Parse(cols[6]),
-                        int.Parse(cols[7]),
-                        int.Parse(cols[8]),
-                        int.Parse(cols[9]),
-                        int.Parse(cols[10]),
-                        int.Parse(cols[11]),
-                        int.Parse(cols[12]),
-                        int.Parse(cols[13]),
-                        int.Parse(cols[14])
-                    ));
-                }
-            }
-        }
-
+        protected abstract void openConnection();
+        protected abstract void loadClubs();
+        protected abstract void loadManagers();
+        protected abstract void loadPlayers();
 
 
 

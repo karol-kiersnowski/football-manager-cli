@@ -26,12 +26,15 @@ namespace FootballManager
             Console.Write(">> ");
             selectedOption = Console.ReadLine();
 
-            checkBasicOptions();
-
             switch (selectedOption)
             {
                 case "1": new Text("English"); isRunning = false; break;
                 case "2": new Text("Polish"); isRunning = false; break;
+                case "q":
+                case "quit":
+                case "exit":
+                    Program.isRunning = false;
+                    break;
             }
         }
 

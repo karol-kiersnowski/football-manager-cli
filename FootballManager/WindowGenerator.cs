@@ -29,7 +29,7 @@ namespace FootballManager
                     Generator generator = new Generator();
                     if (generator.generuj() == 0)
                     {
-                        new Database();
+                        new DataSQLite();
                         Console.WriteLine(Text.confirmation);
                     }
                     else

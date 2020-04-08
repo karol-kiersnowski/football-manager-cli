@@ -37,10 +37,9 @@ namespace FootballManager
         {
             Console.Write(Text.selection);
             selectedOption = Console.ReadLine();
+            checkBasicOptions();
             switch (selectedOption)
             {
-                case "q": Program.isRunning = false; break;
-                case "0": isRunning = false; break;
                 case "1": playRound(); break;
                 case "2": new WindowSquad(menu, club, null).run(); break;
                 case "3": new WindowTactics(menu, club, null).run(); break;

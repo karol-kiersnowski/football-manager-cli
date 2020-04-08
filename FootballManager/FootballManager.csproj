@@ -45,7 +45,7 @@
     <Compile Include="Club.cs" />
     <Compile Include="Cup.cs" />
     <Compile Include="CupWithGroupStage.cs" />
-    <Compile Include="Database.cs" />
+    <Compile Include="DataSQLite.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Finance.cs" />
     <Compile Include="Games.cs" />
@@ -99,7 +99,8 @@
     <Compile Include="WindowTransferList.cs" />
     <Compile Include="WindowTransfers.cs" />
     <Compile Include="WindowTransfersSales.cs" />
-    <Compile Include="CSVStreamer.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="DataCSV.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
