@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FootballManager</RootNamespace>
+    <AssemblyName>FootballManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action.cs" />
+    <Compile Include="Club.cs" />
+    <Compile Include="Cup.cs" />
+    <Compile Include="CupWithGroupStage.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Finance.cs" />
+    <Compile Include="Games.cs" />
+    <Compile Include="Generator.cs" />
+    <Compile Include="League.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="Match.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Pitch.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referee.cs" />
+    <Compile Include="Representation.cs" />
+    <Compile Include="Round.cs" />
+    <Compile Include="Squad.cs" />
+    <Compile Include="Stadium.cs" />
+    <Compile Include="StatisticsClub.cs" />
+    <Compile Include="StatisticsPlayer.cs" />
+    <Compile Include="TableCleanSheets.cs" />
+    <Compile Include="TableLeague.cs" />
+    <Compile Include="TableTopScorers.cs" />
+    <Compile Include="Tactics.cs" />
+    <Compile Include="Team.cs" />
+    <Compile Include="Text.cs" />
+    <Compile Include="Training.cs" />
+    <Compile Include="Transfer.cs" />
+    <Compile Include="Window.cs" />
+    <Compile Include="WindowAboutGame.cs" />
+    <Compile Include="WindowAfterMatch.cs" />
+    <Compile Include="WindowBeforeMatch.cs" />
+    <Compile Include="WindowClubs.cs" />
+    <Compile Include="WindowFinance.cs" />
+    <Compile Include="WindowFixturesClub.cs" />
+    <Compile Include="WindowFixturesLeague.cs" />
+    <Compile Include="WindowGenerator.cs" />
+    <Compile Include="WindowLanguage.cs" />
+    <Compile Include="WindowLoading.cs" />
+    <Compile Include="WindowMain.cs" />
+    <Compile Include="WindowManagerMode.cs" />
+    <Compile Include="WindowMatch.cs" />
+    <Compile Include="WindowSettings.cs" />
+    <Compile Include="WindowSaving.cs" />
+    <Compile Include="WindowSquad.cs" />
+    <Compile Include="WindowStadium.cs" />
+    <Compile Include="WindowStatistics.cs" />
+    <Compile Include="WindowTable.cs" />
+    <Compile Include="WindowTactics.cs" />
+    <Compile Include="WindowTopScorers.cs" />
+    <Compile Include="WindowTraining.cs" />
+    <Compile Include="WindowTransferList.cs" />
+    <Compile Include="WindowTransfers.cs" />
+    <Compile Include="WindowTransfersSales.cs" />
+    <Compile Include="CSVStreamer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
