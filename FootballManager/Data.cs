@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 
 namespace FootballManager
 {
@@ -9,10 +7,10 @@ namespace FootballManager
         public static Data instance { get; private set; }
 
         public Club[] clubs { get; protected set; }
-        public Club[] clubsLeague1 { get; protected set; }
-        public Club[] clubsLeague2 { get; protected set; }
         public Manager[] managers { get; protected set; }
         public Player[] players { get; protected set; }
+        public Club[] clubsLeague1 { get; protected set; }
+        public Club[] clubsLeague2 { get; protected set; }
 
         public Data()
         {

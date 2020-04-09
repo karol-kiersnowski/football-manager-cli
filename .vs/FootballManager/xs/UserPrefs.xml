@@ -6,7 +6,7 @@
         <State name="__root__">
           <Node name="FootballManager" expanded="True">
             <Node name="FootballManager" expanded="True">
-              <Node name="Data.cs" selected="True" />
+              <Node name="Action.cs" selected="True" />
             </Node>
           </Node>
         </State>
