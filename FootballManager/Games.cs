@@ -18,7 +18,7 @@ namespace FootballManager
         public League polishLeague2 { get; private set; }
 
         public Club playerClub { get; private set; }
-        public List<Club> clubs { get; private set; }
+        public Club[] clubs { get; private set; }
 
         public List<Player> transferList { get; private set; }
 
@@ -36,7 +36,7 @@ namespace FootballManager
 
             transferList = new List<Player>();
 
-            for (int i = 0; i < clubs.Count; i++)
+            for (int i = 0; i < clubs.Length; i++)
             {
                 clubs[i].manager.setForSale();
             }
@@ -44,7 +44,7 @@ namespace FootballManager
             List<Club> clubs1 = new List<Club>(16);
             List<Club> clubs2 = new List<Club>(16);
 
-            for (int i = 0; i < clubs.Count; i++)
+            for (int i = 0; i < clubs.Length; i++)
             {
                 if (clubs[i].league == "1") clubs1.Add(clubs[i]);
                 if (clubs[i].league == "2") clubs2.Add(clubs[i]);

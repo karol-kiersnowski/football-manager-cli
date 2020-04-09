@@ -63,7 +63,7 @@ namespace FootballManager
                 Console.Write(transferList[i].surname);
                 x += 14;
                 Console.SetCursorPosition(x, y + i);
-                for (int j = 0; j < Data.instance.clubs.Count; j++)
+                for (int j = 0; j < Data.instance.clubs.Length; j++)
                 {
                     if (Data.instance.clubs[j].id == transferList[i].clubId)
                         Console.Write(Data.instance.clubs[j].fullName);

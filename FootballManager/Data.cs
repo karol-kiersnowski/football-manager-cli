@@ -8,20 +8,20 @@ namespace FootballManager
     {
         public static Data instance { get; private set; }
 
-        public List<Club> clubs { get; protected set; }
-        public List<Club> clubsLeague1 { get; protected set; }
-        public List<Club> clubsLeague2 { get; protected set; }
-        public List<Manager> managers { get; protected set; }
-        public List<Player> players { get; protected set; }
+        public Club[] clubs { get; protected set; }
+        public Club[] clubsLeague1 { get; protected set; }
+        public Club[] clubsLeague2 { get; protected set; }
+        public Manager[] managers { get; protected set; }
+        public Player[] players { get; protected set; }
 
         public Data()
         {
             instance = this;
 
-            clubsLeague1 = new List<Club>(16);
-            clubsLeague2 = new List<Club>(16);
+            clubsLeague1 = new Club[16];
+            clubsLeague2 = new Club[16];
 
-            openConnection();
+            initiate();
             loadClubs();
             loadManagers();
             loadPlayers();
@@ -29,7 +29,7 @@ namespace FootballManager
             assignManagersToClubs();
             assignPlayersToClubs();
 
-            for (int i = 0; i < clubs.Count; i++)
+            for (int i = 0; i < clubs.Length; i++)
             {
                 clubs[i].squad.sortByNumbers();
                 clubs[i].squad.updateFirst11();
@@ -37,7 +37,7 @@ namespace FootballManager
             }
         }
 
-        protected abstract void openConnection();
+        protected abstract void initiate();
         protected abstract void loadClubs();
         protected abstract void loadManagers();
         protected abstract void loadPlayers();
@@ -47,12 +47,19 @@ namespace FootballManager
 
         void assignClubsToLeagues()
         {
-            for (int i = 0; i < clubs.Count; i++)
+            int l1 = 0;
+            int l2 = 0;
+            for (int i = 0; i < clubs.Length; i++)
             {
                 if (clubs[i].league == "1")
-                    clubsLeague1.Add(clubs[i]);
-                else if (clubs[i].league == "2")
-                    clubsLeague2.Add(clubs[i]);
+                {
+                    clubsLeague1[l1] = clubs[i];
+                    l1++;
+                } else if (clubs[i].league == "2")
+                {
+                    clubsLeague2[l2] = clubs[i];
+                    l2++;
+                }
             }
         }
 
@@ -60,9 +67,9 @@ namespace FootballManager
         {
             try
             {
-                for (int j = 0; j < managers.Count; j++)
+                for (int j = 0; j < managers.Length; j++)
                 {
-                    for (int i = 0; i < clubs.Count; i++)
+                    for (int i = 0; i < clubs.Length; i++)
                     {
                         if (managers[j].clubId == clubs[i].id)
                         {
@@ -82,9 +89,9 @@ namespace FootballManager
         {
             try
             {
-                for (int j = 0; j < players.Count; j++)
+                for (int j = 0; j < players.Length; j++)
                 {
-                    for (int i = 0; i < clubs.Count; i++)
+                    for (int i = 0; i < clubs.Length; i++)
                     {
                         if (players[j].clubId == clubs[i].id)
                             clubs[i].squad.players.Add(players[j]);

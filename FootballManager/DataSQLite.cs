@@ -14,7 +14,7 @@ namespace FootballManager
         SQLiteDataAdapter adapter;
         DataSet dataSet;
 
-        protected override void openConnection()
+        protected override void initiate()
         {
             try
             {
