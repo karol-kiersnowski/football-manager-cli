@@ -101,6 +101,7 @@
     <Compile Include="WindowTransfersSales.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="DataCSV.cs" />
+    <Compile Include="Console.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

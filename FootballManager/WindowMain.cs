@@ -37,7 +37,7 @@ namespace FootballManager
                 case "1": new WindowClubs(menu, Text.friendlyMatch).run(); break;
                 case "2": new WindowClubs(menu, Text.managerMode).run(); break;
                 //case "3": new WindowManagerMode(menu, null).run();      break;
-                case "4": new WindowGenerator(menu).run();              break;
+                //case "4": new WindowGenerator(menu).run();              break;
                 case "5": new WindowAboutGame(menu).run();              break;
                 case "6": new WindowSettings(menu).run();                break;
             }

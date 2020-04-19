@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FootballManager
+﻿namespace FootballManager
 {
     class WindowFinance : Window
     {
@@ -16,41 +14,41 @@ namespace FootballManager
             int initialY = displayHeader();
 
             Console.Write(Text.week + Games.instance.polishLeague1.nrRound + ".");
-            Console.Write("\t\t" + Text.money + "{0:n0} ({1:n0})", finance.money, finance.moneyFromPreviousWeek);
+            System.Console.Write("\t\t" + Text.money + "{0:n0} ({1:n0})", finance.money, finance.moneyFromPreviousWeek);
 
             int x = 0;
             int y = initialY + 2;
 
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.ingoing, finance.ingoing);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.ingoing, finance.ingoing);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.tickets, finance.tickets);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.tickets, finance.tickets);
             y++;
             Console.SetCursorPosition(x, y);
-           Console.Write("{0,-10} {1,7:n0}", Text.sponsors, finance.sponsors);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.sponsors, finance.sponsors);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.transfers, finance.saleOfPlayers);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.transfers, finance.saleOfPlayers);
 
             x += 25;
             y = initialY + 2;
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.outgoing, finance.outgoing);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.outgoing, finance.outgoing);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.stadium, finance.stadium);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.stadium, finance.stadium);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.salaries, finance.salaries);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.salaries, finance.salaries);
             y++;
-           Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.transfers, finance.purchaseOfPlayers);
+            Console.SetCursorPosition(x, y);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.transfers, finance.purchaseOfPlayers);
 
             x = 0;
             y = initialY + 7;
             Console.SetCursorPosition(x, y);
-            Console.Write("{0,-10} {1,7:n0}", Text.balance, finance.balance);
+            System.Console.Write("{0,-10} {1,7:n0}", Text.balance, finance.balance);
         }
 
         protected override void selectOption()

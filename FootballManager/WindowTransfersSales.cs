@@ -22,10 +22,10 @@ namespace FootballManager
             Console.Write(Text.number);
             x += 4;
             Console.SetCursorPosition(x, y);
-           Console.Write(Text.player);
+            Console.Write(Text.player);
             x += 17;
             Console.SetCursorPosition(x, y);
-           Console.Write(Text.age);
+            Console.Write(Text.age);
             x += 5;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.tot);
@@ -42,12 +42,12 @@ namespace FootballManager
             Console.SetCursorPosition(x, y);
             Console.Write(Text.sho);
             x += 4;
-           Console.SetCursorPosition(x, y);
+            Console.SetCursorPosition(x, y);
             Console.Write(Text.sta);
             x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.value);
-           x += 10;
+            x += 10;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.salary);
             x += 7;
@@ -65,7 +65,7 @@ namespace FootballManager
                 Console.SetCursorPosition(x, y + i);
                 Console.Write(players[i].fSurname);
                 x += 17;
-                setColor(players[i].age, "wiek");
+                setColorAge(players[i].age);
                 Console.SetCursorPosition(x, y + i);
                 Console.Write(players[i].age);
                 x += 5;
@@ -93,14 +93,14 @@ namespace FootballManager
                 Console.SetCursorPosition(x, y + i);
                 Console.Write(players[i].condition);
                 x += 4;
-                Console.ForegroundColor = ConsoleColor.Gray;
+                System.Console.ForegroundColor = ConsoleColor.Gray;
                 Console.SetCursorPosition(x, y + i);
-                Console.Write("{0:n0}", players[i].value);
+                System.Console.Write("{0:n0}", players[i].value);
                 x += 10;
                 Console.SetCursorPosition(x, y + i);
-                Console.Write("{0:n0}", players[i].salary);
+                System.Console.Write("{0:n0}", players[i].salary);
                 x += 7;
-                Console.ForegroundColor = ConsoleColor.Gray;
+                System.Console.ForegroundColor = ConsoleColor.Gray;
                 Console.SetCursorPosition(x, y + i);
                 if (players[i].isForSale)
                     Console.Write("Na sprzedaż");
@@ -131,36 +131,12 @@ namespace FootballManager
             }
         }
 
-        Club club;
-        List<Player> players;
-
-        void setColor(int skills)
-        {
-            if (skills >= 80)
-                Console.ForegroundColor = ConsoleColor.Cyan;
-            if (skills >= 60 && skills < 80)
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-            if (skills >= 40 && skills < 60)
-                Console.ForegroundColor = ConsoleColor.Blue;
-            if (skills < 40)
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-        }
-
-        void setColor(int age, string data)
-        {
-            if (age < 20)
-                Console.ForegroundColor = ConsoleColor.Cyan;
-            if (age >= 20 && age < 27)
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-            if (age >= 27 && age < 35)
-                Console.ForegroundColor = ConsoleColor.Blue;
-            if (age >= 35)
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-        }
-
         protected override void update()
         {
             
         }
+
+        Club club;
+        List<Player> players;
     }
 }

@@ -1,84 +1,15 @@
-﻿using System;
-
-namespace FootballManager
+﻿namespace FootballManager
 {
     public abstract class Window
     {
-        public static int width { get; private set; }
-        public static int height { get; private set; }
-
-        // USES CONSOLE CLASS
-        public static ConsoleKeyInfo readKey()
-        {
-            return Console.ReadKey();
-        }
-
-        public static void write(string text)
-        {
-            Console.Write(text);
-        }
-
-        public static void writeLine(string text)
-        {
-            Console.WriteLine(text);
-        }
-
-        public static void clear()
-        {
-            Console.Clear();
-        }
-
-        public static void setTitle(string title)
-        {
-            Console.Title = title;
-        }
-
-        public static void setDimensions(int Width, int Height)
-        {
-            try
-            {
-                if (Width <= Console.LargestWindowWidth && Height <= Console.LargestWindowHeight)
-                {
-                    Console.WindowWidth = Width;
-                    Console.WindowHeight = Height;
-                    Console.BufferWidth = Width;
-                    width = Width;
-                    height = Height;
-                }
-            }
-            catch (Exception e)
-            {
-                displayMessage(e.Message);
-            }
-        }
-
-        public static void setColor(Position position)
-        {
-            if (position == Position.goalkeeper)
-                Console.ForegroundColor = ConsoleColor.Green;
-            if (position == Position.defender)
-                Console.ForegroundColor = ConsoleColor.Magenta;
-            if (position == Position.midfielder)
-                Console.ForegroundColor = ConsoleColor.Yellow;
-            if (position == Position.forward)
-                Console.ForegroundColor = ConsoleColor.Blue;
-        }
-
-        // END USES CONSOLE CLASS
-
-
-
         public static void displayMessage(string text)
         {
-            clear();
-            writeLine(logo);
-            writeLine(">> Error\n");
-            writeLine(text);
-            readKey();
+            Console.Clear();
+            Console.WriteLine(logo);
+            Console.WriteLine(">> Error\n");
+            Console.WriteLine(text);
+            Console.ReadKey();
         }
-
-
-
 
 
 
@@ -129,8 +60,8 @@ namespace FootballManager
 
         protected int displayHeader()
         {
-            clear();
-            if (height > 24)
+            Console.Clear();
+            if (Console.Height > 24)
             {
                 Console.WriteLine(logo);
                 Console.WriteLine(menu + "\n");
@@ -184,15 +115,51 @@ namespace FootballManager
         {
             char sign = '\u25A0';
             if (level < 20)
-                Console.Write("{0}", sign);
+                System.Console.Write("{0}", sign);
             else if (level < 40)
-                Console.Write("{0}{1}", sign, sign);
+                System.Console.Write("{0}{1}", sign, sign);
             else if (level < 60)
-                Console.Write("{0}{1}{2}", sign, sign, sign);
+                System.Console.Write("{0}{1}{2}", sign, sign, sign);
             else if (level < 80)
-                Console.Write("{0}{1}{2}{3}", sign, sign, sign, sign);
+                System.Console.Write("{0}{1}{2}{3}", sign, sign, sign, sign);
             else if (level < 100)
-                Console.Write("{0}{1}{2}{3}{4}", sign, sign, sign, sign, sign);
+                System.Console.Write("{0}{1}{2}{3}{4}", sign, sign, sign, sign, sign);
+        }
+
+        protected void setColor(int skills)
+        {
+            if (skills >= 80)
+                System.Console.ForegroundColor = System.ConsoleColor.Cyan;
+            if (skills >= 60 && skills < 80)
+                System.Console.ForegroundColor = System.ConsoleColor.DarkCyan;
+            if (skills >= 40 && skills < 60)
+                System.Console.ForegroundColor = System.ConsoleColor.Blue;
+            if (skills < 40)
+                System.Console.ForegroundColor = System.ConsoleColor.DarkBlue;
+        }
+
+        protected void setColorAge(int age)
+        {
+            if (age < 20)
+                System.Console.ForegroundColor = System.ConsoleColor.Cyan;
+            if (age >= 20 && age < 27)
+                System.Console.ForegroundColor = System.ConsoleColor.DarkCyan;
+            if (age >= 27 && age < 35)
+                System.Console.ForegroundColor = System.ConsoleColor.Blue;
+            if (age >= 35)
+                System.Console.ForegroundColor = System.ConsoleColor.DarkBlue;
+        }
+
+        public static void setColor(Position position)
+        {
+            if (position == Position.goalkeeper)
+                System.Console.ForegroundColor = System.ConsoleColor.Green;
+            if (position == Position.defender)
+                System.Console.ForegroundColor = System.ConsoleColor.Magenta;
+            if (position == Position.midfielder)
+                System.Console.ForegroundColor = System.ConsoleColor.Yellow;
+            if (position == Position.forward)
+                System.Console.ForegroundColor = System.ConsoleColor.Blue;
         }
     }
 }

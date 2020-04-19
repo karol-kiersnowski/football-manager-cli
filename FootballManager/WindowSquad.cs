@@ -23,7 +23,7 @@ namespace FootballManager
         {
             int initialY = displayHeader();
 
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            System.Console.BackgroundColor = ConsoleColor.DarkGreen;
             pitch.draw(52, initialY);
             pitch.writeNumbers(52, initialY, club);
             Console.ResetColor();
@@ -31,9 +31,9 @@ namespace FootballManager
             Console.SetCursorPosition(52, initialY + 17);
             Console.WriteLine(Text.tot + " - " + Text.total);
             Console.SetCursorPosition(52, initialY + 18);
-           Console.WriteLine(Text.gk + "  - " + Text.goalkeeping);
+            Console.WriteLine(Text.gk + "  - " + Text.goalkeeping);
             Console.SetCursorPosition(52, initialY + 19);
-           Console.WriteLine(Text.plm + " - " + Text.playmaking);
+            Console.WriteLine(Text.plm + " - " + Text.playmaking);
             Console.SetCursorPosition(52, initialY + 20);
             Console.WriteLine(Text.sho + " - " + Text.shooting);
 
@@ -41,7 +41,7 @@ namespace FootballManager
             int y = initialY;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.number);
-           x += 4;
+            x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.player);
             x += 17;
@@ -63,7 +63,7 @@ namespace FootballManager
             Console.Write(Text.plm);
             x += 4;
             Console.SetCursorPosition(x, y);
-           Console.Write(Text.sho);
+            Console.Write(Text.sho);
             x += 4;
             Console.SetCursorPosition(x, y);
             Console.Write(Text.sta);
@@ -224,41 +224,14 @@ namespace FootballManager
             club.calculateSkills();
         }
 
+        protected override void update() {}
+
         Club club;
         List<Player> players;
         Player temp;
         int nr1;
         int nr2;
         Match match;
-
-        void setColor(int skills)
-        {
-            if (skills >= 80)
-                Console.ForegroundColor = ConsoleColor.Cyan;
-            if (skills >= 60 && skills < 80)
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-            if (skills >= 40 && skills < 60)
-                Console.ForegroundColor = ConsoleColor.Blue;
-            if (skills < 40)
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-        }
-
-        void setColorAge(int age)
-        {
-            if (age < 20)
-                Console.ForegroundColor = ConsoleColor.Cyan;
-            if (age >= 20 && age < 27)
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-            if (age >= 27 && age < 35)
-                Console.ForegroundColor = ConsoleColor.Blue;
-            if (age >= 35)
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-        }
-
-        protected override void update()
-        {
-        }
-
         Pitch pitch;
     }
 }

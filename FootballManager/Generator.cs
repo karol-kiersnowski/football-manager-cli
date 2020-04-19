@@ -28,7 +28,7 @@ namespace FootballManager
             catch (Exception e)
             {
                 connection.Close();
-                Window.writeLine(e.Message);
+                Console.WriteLine(e.Message);
                 isError = true;
             }
             if (isError == false)
@@ -117,7 +117,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                Window.writeLine(e.Message);
+                Console.WriteLine(e.Message);
                 connection.Close();
             }
         }
@@ -143,7 +143,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                Window.writeLine(e.Message);
+                Console.WriteLine(e.Message);
                 connection.Close();
             }
         }
@@ -171,7 +171,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                Window.writeLine(e.Message);
+                Console.WriteLine(e.Message);
                 connection.Close();
             }
         }
@@ -270,7 +270,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                Window.writeLine(e.Message);
+                Console.WriteLine(e.Message);
                 connection.Close();
             }
         }

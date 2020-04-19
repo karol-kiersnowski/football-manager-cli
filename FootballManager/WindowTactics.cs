@@ -27,7 +27,7 @@ namespace FootballManager
         protected override void draw()
         {
             int initialY = displayHeader();
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            System.Console.BackgroundColor = ConsoleColor.DarkGreen;
             pitch.draw(50, initialY);
             pitch.writeNumbers(50, initialY, club);
             Console.ResetColor();
@@ -53,7 +53,7 @@ namespace FootballManager
                     if (selectedNumber == j+1)
                     {
                         Console.WriteLine();
-                        Console.WriteLine("{0,-18} {1}", "   " + options[j], "| " + taktyka);
+                        System.Console.WriteLine("{0,-18} {1}", "   " + options[j], "| " + taktyka);
                         if (selectedNumber == 1)
                         {
                             for (int i = 0; i < Tactics.formations.Length; i++)
@@ -87,10 +87,10 @@ namespace FootballManager
                         Console.WriteLine();
                     }
                     else
-                        Console.WriteLine("{0,-18} {1}", "   " + options[j], "| " + taktyka);
+                        System.Console.WriteLine("{0,-18} {1}", "   " + options[j], "| " + taktyka);
                 }
                 else if (selected1Number == -1)
-                    Console.WriteLine("{0,-18} {1}", (j + 1) + ". " + options[j], "| " + taktyka);
+                    System.Console.WriteLine("{0,-18} {1}", (j + 1) + ". " + options[j], "| " + taktyka);
             }
 
             Console.WriteLine();

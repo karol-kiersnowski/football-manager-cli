@@ -29,15 +29,15 @@ namespace FootballManager
         void displayStatistics(int x, int y)
         {
             Console.SetCursorPosition(x, y);
-            Console.WriteLine("{0,-22} {1,-5} {2,22}",
+            System.Console.WriteLine("{0,-22} {1,-5} {2,22}",
                 match.host.fullName, match.result, match.guest.fullName);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.WriteLine("{0,-16} {1,-16} {2,17}",
+            System.Console.WriteLine("{0,-16} {1,-16} {2,17}",
                 match.ballPossessionHost + "%", Text.ballPossession, match.ballPossessionGuest + "%");
             y++;
             Console.SetCursorPosition(x, y);
-            Console.WriteLine("{0,-16} {1,-16} {2,16}",
+            System.Console.WriteLine("{0,-16} {1,-16} {2,16}",
                 match.attackForceHost +"%", Text.attackForce, match.attackForceGuest + "%");
         }
 

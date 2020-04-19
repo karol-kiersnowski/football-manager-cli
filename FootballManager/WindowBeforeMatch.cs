@@ -21,11 +21,11 @@ namespace FootballManager
         {
             displayHeader();
             displayOptions();
-            Console.WriteLine("{0,-17} {1,-7} {2,17}", host.fullName, "Drużyny", guest.fullName);
-            Console.WriteLine("{0,-17} {1,-16} {2,8}", host.total, "Poziom", guest.total);
-            Console.WriteLine("{0,-17} {1,-16} {2,8}", host.attack, "Atak", guest.attack);
-            Console.WriteLine("{0,-17} {1,-16} {2,8}", host.middle, "Pomoc", guest.middle);
-            Console.WriteLine("{0,-17} {1,-16} {2,8}", host.defense, "Obrona", guest.defense);
+            System.Console.WriteLine("{0,-17} {1,-7} {2,17}", host.fullName, "Drużyny", guest.fullName);
+            System.Console.WriteLine("{0,-17} {1,-16} {2,8}", host.total, "Poziom", guest.total);
+            System.Console.WriteLine("{0,-17} {1,-16} {2,8}", host.attack, "Atak", guest.attack);
+            System.Console.WriteLine("{0,-17} {1,-16} {2,8}", host.middle, "Pomoc", guest.middle);
+            System.Console.WriteLine("{0,-17} {1,-16} {2,8}", host.defense, "Obrona", guest.defense);
 
             //Console.WriteLine(gospodarz.nazwa + "\t\t" + gosc.nazwa);
             //Console.WriteLine(gospodarz.poziom + "\t\tPoziom\t\t" + gosc.poziom);

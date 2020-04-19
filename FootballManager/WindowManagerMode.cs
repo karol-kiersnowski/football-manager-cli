@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FootballManager
+﻿namespace FootballManager
 {
     class WindowManagerMode : Window
     {
@@ -14,12 +12,12 @@ namespace FootballManager
             options = new string[9];
             options[0] = Text.startMatch;
             options[1] = Text.squad;
-           options[2] = Text.tactics;
-           options[3] = Text.training;
+            options[2] = Text.tactics;
+            options[3] = Text.training;
             options[4] = Text.transfers;
             options[5] = Text.finance;
             options[6] = Text.stadium;
-           options[7] = Text.statistics;
+            options[7] = Text.statistics;
             options[8] = Text.saveGame;
 
             playerClub.manager.setTheBestSquad();
@@ -85,7 +83,7 @@ namespace FootballManager
             Console.WriteLine(Text.season + Games.instance.season);
             y++;
             Console.SetCursorPosition(x, y);
-            Console.WriteLine(Text.money + "{0:n0}", Games.instance.playerClub.finance.money);
+            System.Console.WriteLine(Text.money + "{0:n0}", Games.instance.playerClub.finance.money);
             y++;
             Console.SetCursorPosition(x, y);
             Console.WriteLine(Text.nextRound +(Games.instance.polishLeague1.nrRound + 1));

@@ -79,7 +79,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                Window.writeLine(e.Message);
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -98,7 +98,7 @@ namespace FootballManager
             }
             catch (Exception e)
             {
-                Window.writeLine(e.Message);
+                Console.WriteLine(e.Message);
             }
         }
     }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FootballManager
+﻿namespace FootballManager
 {
     class WindowSettings : Window
     {
@@ -43,9 +41,9 @@ namespace FootballManager
             {
                 case "1": new Text("English"); break;
                 case "2": new Text("Polish"); break;
-                case "3": setDimensions(80, 25); break;
-                case "4": setDimensions(80, 28); break;
-                case "5": setDimensions(80, 43); break;
+                case "3": Console.SetDimensions(80, 25); break;
+                case "4": Console.SetDimensions(80, 28); break;
+                case "5": Console.SetDimensions(80, 43); break;
             }
         }
     }

@@ -69,7 +69,7 @@ namespace FootballManager
                         Console.Write(Data.instance.clubs[j].fullName);
                 }
                 x += 23;
-                setColor(transferList[i].age, "wiek");
+                setColorAge(transferList[i].age);
                 Console.SetCursorPosition(x, y + i);
                 Console.Write(transferList[i].age);
                 x += 5;
@@ -99,9 +99,9 @@ namespace FootballManager
                 x += 4;
                 setColor(transferList[i].value, i);
                 Console.SetCursorPosition(x, y + i);
-                Console.Write("{0:n0}", transferList[i].value);
+                System.Console.Write("{0:n0}", transferList[i].value);
 
-                Console.ForegroundColor = ConsoleColor.Gray;
+                System.Console.ForegroundColor = ConsoleColor.Gray;
             }
         }
         protected override void selectOption()
@@ -145,43 +145,21 @@ namespace FootballManager
             }
         }
 
+        protected override void update()
+        {
+
+        }
+
         Club club;
         List<Player> transferList;
         Player selectedPlayer;
 
-        void setColor(int skills)
-        {
-            if (skills >= 80)
-                Console.ForegroundColor = ConsoleColor.Cyan;
-            if (skills >= 60 && skills < 80)
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-            if (skills >= 40 && skills < 60)
-                Console.ForegroundColor = ConsoleColor.Blue;
-            if (skills < 40)
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-        }
-        void setColor(int age, string data)
-        {
-            if (age < 20)
-                Console.ForegroundColor = ConsoleColor.Cyan;
-            if (age >= 20 && age < 27)
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-            if (age >= 27 && age < 35)
-                Console.ForegroundColor = ConsoleColor.Blue;
-            if (age >= 35)
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-        }
         void setColor(double price, int i)
         {
             if (club.finance.money >= transferList[i].value)
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                System.Console.ForegroundColor = System.ConsoleColor.Cyan;
             if (club.finance.money < transferList[i].value)
-                Console.ForegroundColor = ConsoleColor.Blue;
-        }
-
-        protected override void update()
-        {
-            
+                System.Console.ForegroundColor = System.ConsoleColor.Blue;
         }
     }
 }
