@@ -82,7 +82,7 @@
             }
             catch (System.Exception e)
             {
-                Console.WriteLine(e.Message);
+                displayMessage(e.Message);
             }
         }
 
@@ -91,23 +91,50 @@
             System.Console.Title = title;
         }
 
+        public static void SetWindowSize(int width, int height)
+        {
+            try
+            {
+                System.Console.SetWindowSize(width, height);
+            }
+            catch (System.Exception e)
+            {
+                displayMessage(e.Message);
+            }
+        }
+
         public static void SetDimensions(int width, int height)
         {
             try
             {
-                if (Width <= System.Console.LargestWindowWidth && Height <= System.Console.LargestWindowHeight)
-                {
-                    System.Console.WindowWidth = width;
-                    System.Console.WindowHeight = height;
-                    System.Console.BufferWidth = width;
-                    Width = width;
-                    Height = height;
-                }
+                System.Console.SetWindowSize(width, height);
             }
             catch (System.Exception e)
             {
-                Console.WriteLine(e.Message);
+                displayMessage(e.Message);
             }
+            //try
+            //{
+            //    if (Width <= System.Console.LargestWindowWidth && Height <= System.Console.LargestWindowHeight)
+            //    {
+            //        System.Console.WindowWidth = width;
+            //        System.Console.WindowHeight = height;
+            //        System.Console.BufferWidth = width;
+            //        Width = width;
+            //        Height = height;
+            //    }
+            //}
+            //catch (System.Exception e)
+            //{
+            //    displayMessage(e.Message);
+            //}
+        }
+
+        static void displayMessage(string text)
+        {
+            Console.WriteLine(">> Error <<\n");
+            Console.WriteLine(text);
+            //Console.ReadKey();
         }
     }
 }

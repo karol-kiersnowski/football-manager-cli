@@ -6,11 +6,10 @@
 
         static void Main(string[] args)
         {
-            //Console.CursorVisible = false;
             //Console.OutputEncoding = System.Text.Encoding.UTF8;
             isRunning = true;
             Console.SetTitle("Football Manager");
-            Console.SetDimensions(80, 25);
+            Console.SetDimensions(80, 24);
             new WindowLanguage().run();
             new WindowLoading().run();
             new WindowMain().run();
