@@ -21,6 +21,13 @@ Screenshots
 -----------
 ![Football Manager CLI >> Squad](http://karol-kiersnowski.prv.pl/img/projects/football-manager-cli.png)
 
+To do
+-----
+* fix match engine
+* saving game state
+* generate data
+* rewrite to C++ and compile in DOS (maybe someday)
+
 Author
 ------
 Karol Kiersnowski
