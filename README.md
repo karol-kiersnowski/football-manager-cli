@@ -25,7 +25,7 @@ To do
 -----
 * fix match engine
 * saving game state
-* generate data
+* add data generator
 * rewrite to C++ and compile in DOS (maybe someday)
 
 Author
