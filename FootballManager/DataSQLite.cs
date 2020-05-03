@@ -6,15 +6,8 @@ using System.Data;
 namespace FootballManager
 {
     class DataSQLite// : Data
-    {
-        public DataSQLite() { }
-
-        /*SQLiteConnection connection;
-        SQLiteCommand command;
-        SQLiteDataAdapter adapter;
-        DataSet dataSet;
-
-        protected override void initiate()
+    {/*
+        public DataSQLite()
         {
             try
             {
@@ -36,6 +29,16 @@ namespace FootballManager
                 connection.Close();
                 Window.displayMessage(e.Message);
             }
+        }
+
+        SQLiteConnection connection;
+        SQLiteCommand command;
+        SQLiteDataAdapter adapter;
+        DataSet dataSet;
+
+        protected override void initiate()
+        {
+
         }
 
         protected override void loadClubs()

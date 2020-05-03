@@ -11,17 +11,13 @@ namespace FootballManager
         int getRowsCount(string fileName)
         {
             int rowsCount = 0;
-            using (reader = new StreamReader(fileName))
+            reader = new StreamReader(fileName);
+            while (reader.ReadLine() != null)
             {
-                while (reader.ReadLine() != null)
-                {
-                    rowsCount++;
-                }
+                rowsCount++;
             }
             return rowsCount - 1;
         }
-
-        protected override void initiate() { }
 
         protected override void loadClubs()
         {

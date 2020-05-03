@@ -19,7 +19,6 @@ namespace FootballManager
             clubsLeague1 = new Club[16];
             clubsLeague2 = new Club[16];
 
-            initiate();
             loadClubs();
             loadManagers();
             loadPlayers();
@@ -35,7 +34,6 @@ namespace FootballManager
             }
         }
 
-        protected abstract void initiate();
         protected abstract void loadClubs();
         protected abstract void loadManagers();
         protected abstract void loadPlayers();
