@@ -1,9 +1,6 @@
 ﻿<Properties StartupConfiguration="{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|Default">
   <MonoDevelop.Ide.ItemProperties.FootballManager PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FootballManager/WindowSettings.cs">
-    <Files>
-      <File FileName="FootballManager/WindowSettings.cs" Line="44" Column="55" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
