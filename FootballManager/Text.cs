@@ -34,6 +34,7 @@
         public static string startManagerMode       { get; private set; }
         public static string loadManagerMode        { get; private set; }
         public static string generateData           { get; private set; }
+        public static string help                   { get; private set; }
         public static string aboutGame              { get; private set; }
         public static string settings               { get; private set; }
         public static string exit                   { get; private set; }
@@ -220,8 +221,9 @@
                 startManagerMode       = "Start a manager mode";
                 loadManagerMode        = "Load a manager mode";
                 generateData           = "Generate new data";
+                help                   = "Help";
                 aboutGame              = "About game";
-                settings                = "Settings";
+                settings               = "Settings";
                 exit                   = "Exit";
 
                 // WINDOW GENERATOR
@@ -254,11 +256,11 @@
                 midfielder              = "M";
                 forward                 = "F";
                 age                    = "Age";
-                tot                    = "Tot";
-                gk                     ="Gk";
-                plm                     = "Plm";
-                sho                     = "Sho";
-                sta                     = "Sta";
+                tot                    = "Total";
+                gk                     ="Goalk";
+                plm                     = "Playm";
+                sho                     = "Shoot";
+                sta                     = "Stami";
                 total                  = "Total";
                 goalkeeping            = "Goalkeeping";
                 playmaking             = "Playmaking";
@@ -406,8 +408,9 @@
                 startManagerMode       = "Rozpocznij tryb menedżera";
                 loadManagerMode        = "Wczytaj tryb menedżera";
                 generateData           = "Generuj nowe dane";
+                help                   = "Pomoc";
                 aboutGame              = "O grze";
-                settings                = "Ustawienia";
+                settings               = "Ustawienia";
                 exit                   = "Wyjście";
 
                 // WINDOW GENERATOR

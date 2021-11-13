@@ -46,7 +46,7 @@
               "____ ____ ____ ___ ___  ____ _    _       _  _ ____ _  _ ____ ____ ____ ____ \n" +
               "|___ |  | |  |  |  |__] |__| |    |       |\\/| |__| |\\ | |__| | __ |___ |__/ \n" +
               "|    |__| |__|  |  |__] |  | |___ |___    |  | |  | | \\| |  | |__] |___ |  \\\n" +
-              "\t\t\t\t\t\t\t\t    v. 20.04";
+              "\t\t\t\t\t\t\t\t    v. 21.11";
 
         protected bool isRunning;
         protected string menu;
@@ -61,17 +61,17 @@
         protected int displayHeader()
         {
             Console.Clear();
-            if (Console.Height > 24)
-            {
+            //if (Console.Height > 24)
+            //{
                 Console.WriteLine(logo);
                 Console.WriteLine(menu + "\n");
                 return 6;
-            }
-            else
-            {
-                Console.WriteLine(menu + "\n");
-                return 2;
-            }
+            //}
+            //else
+            //{
+            //    Console.WriteLine(menu + "\n");
+            //    return 2;
+            //}
         }
 
         protected void displayOptionsWithoutNumbers()
@@ -126,6 +126,19 @@
                 System.Console.Write("{0}{1}{2}{3}{4}", sign, sign, sign, sign, sign);
         }
 
+        protected void draw4Blocks(int level)
+        {
+            char sign = '\u25A0';
+            if (level < 25)
+                System.Console.Write("{0}", sign);
+            else if (level < 50)
+                System.Console.Write("{0}{1}", sign, sign);
+            else if (level < 75)
+                System.Console.Write("{0}{1}{2}", sign, sign, sign);
+            else if (level < 100)
+                System.Console.Write("{0}{1}{2}{3}", sign, sign, sign, sign);
+        }
+
         protected void setColor(int skills)
         {
             if (skills >= 80)
@@ -160,6 +173,11 @@
                 System.Console.ForegroundColor = System.ConsoleColor.Yellow;
             if (position == Position.forward)
                 System.Console.ForegroundColor = System.ConsoleColor.Blue;
+        }
+
+        public static void setColorGray()
+        {
+            System.Console.ForegroundColor = System.ConsoleColor.DarkGray;
         }
     }
 }

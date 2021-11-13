@@ -1,6 +1,6 @@
 ﻿namespace FootballManager
 {
-    public enum Position { goalkeeper, defender, midfielder, forward }
+    public enum Position { goalkeeper, defender, midfielder, forward, reserve }
 
     class Player
     {

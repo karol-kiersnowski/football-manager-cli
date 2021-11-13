@@ -1,12 +1,21 @@
 ﻿<Properties StartupConfiguration="{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|Default">
   <MonoDevelop.Ide.ItemProperties.FootballManager PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="FootballManager/WindowSquad.cs">
+    <Files>
+      <File FileName="FootballManager/WindowMain.cs" Line="33" Column="13" />
+      <File FileName="FootballManager/Window.cs" Line="58" Column="33" />
+      <File FileName="FootballManager/WindowSquad.cs" Line="114" Column="38" />
+      <File FileName="FootballManager/Player.cs" Line="1" Column="1" />
+      <File FileName="FootballManager/Manager.cs" Line="1" Column="1" />
+      <File FileName="FootballManager/Squad.cs" Line="35" Column="21" />
+      <File FileName="FootballManager/Club.cs" Line="22" Column="27" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FootballManager" expanded="True">
             <Node name="FootballManager" expanded="True">
-              <Node name="WindowSettings.cs" selected="True" />
+              <Node name="WindowSquad.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -17,7 +26,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/opt/lampp/htdocs/portfolio/projects/football-manager-cli/FootballManager/CSVStreamer.cs" relfile="FootballManager/CSVStreamer.cs" line="11" column="27" />
+      <Breakpoint file="/home/karol/football-manager-cli/FootballManager/CSVStreamer.cs" relfile="FootballManager/CSVStreamer.cs" line="11" column="27" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
