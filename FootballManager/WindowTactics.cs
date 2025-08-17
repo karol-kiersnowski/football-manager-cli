@@ -12,9 +12,9 @@ namespace FootballManager
             this.menu = menu + " >> " + Text.tactics;
             options = new string[6];
             options[0] = Text.formation;
-           options[1] = Text.posture;
+            options[1] = Text.posture;
             options[2] = "Pressing";
-           options[3] = Text.agression;
+            options[3] = Text.agression;
             options[4] = Text.captain;
             options[5] = Text.setPieces;
 
@@ -28,8 +28,8 @@ namespace FootballManager
         {
             int initialY = displayHeader();
             System.Console.BackgroundColor = ConsoleColor.DarkGreen;
-            pitch.draw(50, initialY);
-            pitch.writeNumbers(50, initialY, club);
+            pitch.Draw(50, initialY);
+            pitch.WriteNumbers(50, initialY, club);
             Console.ResetColor();
 
             Console.SetCursorPosition(0, initialY);

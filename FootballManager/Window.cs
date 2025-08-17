@@ -166,18 +166,13 @@
         public static void setColor(Position position)
         {
             if (position == Position.goalkeeper)
-                System.Console.ForegroundColor = System.ConsoleColor.Green;
+                System.Console.ForegroundColor = System.ConsoleColor.DarkRed;
             if (position == Position.defender)
                 System.Console.ForegroundColor = System.ConsoleColor.Magenta;
             if (position == Position.midfielder)
                 System.Console.ForegroundColor = System.ConsoleColor.Yellow;
             if (position == Position.forward)
                 System.Console.ForegroundColor = System.ConsoleColor.Blue;
-        }
-
-        public static void setColorGray()
-        {
-            System.Console.ForegroundColor = System.ConsoleColor.DarkGray;
         }
     }
 }

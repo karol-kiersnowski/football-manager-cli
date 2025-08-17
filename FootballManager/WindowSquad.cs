@@ -88,7 +88,7 @@ namespace FootballManager
             for (int i = 0; i < players.Count; i++)
             {
                 x = 0;
-                
+
                 if (i == 0)
                     Window.setColor(Position.goalkeeper);
                 else if (i < club.tactics.defenders + 1)
@@ -98,7 +98,7 @@ namespace FootballManager
                 else if (i < club.tactics.defenders + club.tactics.midfielders + club.tactics.forwards + 1)
                     Window.setColor(Position.forward);
                 else if (i >= 11)
-                    Window.setColorGray();
+                    Console.SetForegroundColor(ConsoleColor.Gray);
 
                 Console.SetCursorPosition(x, y + i);
                 Console.Write(players[i].nr + ".");

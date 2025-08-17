@@ -53,3 +53,11 @@ C:/Users/Karol/Documents/Visual Studio 2013/Projects/FootballManager 2019.07.12/
 /home/karol/football-manager-cli/FootballManager/obj/Debug/FootballManager.csproj.CoreCompileInputs.cache
 /home/karol/football-manager-cli/FootballManager/obj/Debug/FootballManager.exe
 /home/karol/football-manager-cli/FootballManager/obj/Debug/FootballManager.pdb
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\bin\Debug\FootballManager.exe.config
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\bin\Debug\FootballManager.exe
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\bin\Debug\FootballManager.pdb
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\obj\Debug\FootballManager.csproj.AssemblyReference.cache
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\obj\Debug\FootballManager.exe.config
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\obj\Debug\FootballManager.csproj.CoreCompileInputs.cache
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\obj\Debug\FootballManager.exe
+C:\Users\karol\Source\Repos\football-manager-cli\FootballManager\obj\Debug\FootballManager.pdb

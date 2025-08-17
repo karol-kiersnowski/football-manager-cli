@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|c:\\users\\karol\\source\\repos\\football-manager-cli\\footballmanager\\pitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|solutionrelative:footballmanager\\pitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|C:\\Users\\karol\\source\\repos\\football-manager-cli\\footballmanager\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|solutionrelative:footballmanager\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|c:\\users\\karol\\source\\repos\\football-manager-cli\\footballmanager\\windowsquad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|solutionrelative:footballmanager\\windowsquad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|C:\\Users\\karol\\source\\repos\\football-manager-cli\\footballmanager\\console.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|solutionrelative:footballmanager\\console.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|C:\\Users\\karol\\source\\repos\\football-manager-cli\\footballmanager\\windowlanguage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|solutionrelative:footballmanager\\windowlanguage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|C:\\Users\\karol\\source\\repos\\football-manager-cli\\footballmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|solutionrelative:footballmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|C:\\Users\\karol\\source\\repos\\football-manager-cli\\footballmanager\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC5D4CA7-B386-482E-B5D5-71CB1172BD99}|FootballManager\\FootballManager.csproj|solutionrelative:footballmanager\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WindowSquad.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\WindowSquad.cs",
+              "RelativeDocumentMoniker": "FootballManager\\WindowSquad.cs",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\WindowSquad.cs",
+              "RelativeToolTip": "FootballManager\\WindowSquad.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAD4v2QAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T16:23:03.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pitch.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Pitch.cs",
+              "RelativeDocumentMoniker": "FootballManager\\Pitch.cs",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Pitch.cs",
+              "RelativeToolTip": "FootballManager\\Pitch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T21:13:53.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Window.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Window.cs",
+              "RelativeDocumentMoniker": "FootballManager\\Window.cs",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Window.cs",
+              "RelativeToolTip": "FootballManager\\Window.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAA2wKgAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T21:03:10.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Console.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Console.cs",
+              "RelativeDocumentMoniker": "FootballManager\\Console.cs",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Console.cs",
+              "RelativeToolTip": "FootballManager\\Console.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAqwEIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T17:01:28.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Program.cs",
+              "RelativeDocumentMoniker": "FootballManager\\Program.cs",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Program.cs",
+              "RelativeToolTip": "FootballManager\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T20:54:05.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WindowLanguage.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\WindowLanguage.cs",
+              "RelativeDocumentMoniker": "FootballManager\\WindowLanguage.cs",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\WindowLanguage.cs",
+              "RelativeToolTip": "FootballManager\\WindowLanguage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T20:55:12.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Team.cs",
+              "RelativeDocumentMoniker": "FootballManager\\Team.cs",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\football-manager-cli\\FootballManager\\Team.cs",
+              "RelativeToolTip": "FootballManager\\Team.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T17:42:28.069Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

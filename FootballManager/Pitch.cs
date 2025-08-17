@@ -5,205 +5,187 @@ namespace FootballManager
     class Pitch
     {
         public int[,] boisko { get; private set; }
-        public int dlugosc { get; private set; }
-        public int szerokosc { get; private set; }
+        public int Length { get; private set; }
+        public int Width { get; private set; }
 
-        public Pitch(int dlugosc, int szerokosc, int promien)
+        public Pitch(int length, int width)
         {
-            this.dlugosc = dlugosc;
-            this.szerokosc = szerokosc;
-            this.promien = promien;
-            boisko = new int[dlugosc, szerokosc];
-            gornyLewyRogBoiska = new Punkt(0, 0);
-            gornyPrawyRogBoiska = new Punkt(szerokosc-1, 0);
-            dolnyLewyRogBoiska = new Punkt(0, dlugosc-1);
-            dolnyPrawyRogBoiska = new Punkt(szerokosc-1, dlugosc-1);
-            poleKarneGorneLewyPunkt = new Punkt(szerokosc / 4, dlugosc / 5);
-            poleKarneGornePrawyPunkt = new Punkt(szerokosc * 3 / 4, dlugosc / 5);
-            //srodekBoiska = new Punkt((szerokosc - 1) / 2, dlugosc - 1);
-            srodekPolokregu = new Punkt(szerokosc / 2, dlugosc / 5);
+            this.Length = length;
+            this.Width = width;
+        }
+        public Pitch(int length, int width, int radius)
+        {
+            this.Length = length;
+            this.Width = width;
+            this.radius = radius;
+            boisko = new int[length, width];
 
-            boiskoLiniaGorna = new Odcinek(gornyLewyRogBoiska, gornyPrawyRogBoiska, this);
-            boiskoLiniaDolna = new Odcinek(dolnyLewyRogBoiska, dolnyPrawyRogBoiska, this);
-            boiskoLiniaLewa = new Odcinek(gornyLewyRogBoiska, dolnyLewyRogBoiska, this);
-            boiskoLiniaPrawa = new Odcinek(gornyPrawyRogBoiska, dolnyPrawyRogBoiska, this);
-            poleKarneGorneLewaLinia = new Odcinek(new Punkt(szerokosc / 4, 0), poleKarneGorneLewyPunkt, this);
-            poleKarneGornePrawaLinia = new Odcinek(new Punkt(szerokosc * 3 / 4, 0), poleKarneGornePrawyPunkt, this);
-            poleKarneGorneDolnaLinia = new Odcinek(poleKarneGorneLewyPunkt, poleKarneGornePrawyPunkt, this);
-            //okragSrodkowy = new Okrag(srodekBoiska, 5, this);
-            //polokrag = new Okrag(srodekPolokregu, promien, this);
+            pitchTopLeftCorner = new Point(0, 0, '┌');
+            pitchTopRightCorner = new Point(width-1, 0, '┐');
+            pitchBottomLeftCorner = new Point(0, length-1, '└');
+            pitchBottomRightCorner = new Point(width-1, length-1, '┘');
+            topPenaltyAreaTopLeftCorner = new Point(width * 1 / 4, 0, '┬');
+            topPenaltyAreaTopRightCorner = new Point(width * 3 / 4, 0, '┬');
+            topPenaltyAreaBottomLeftCorner = new Point(width * 1 / 4, length / 5, '└');
+            topPenaltyAreaBottomRightCorner = new Point(width * 3 / 4, length / 5, '┘');
+            pitchCenter = new Point((width - 1) / 2, length - 1);
+            topCircleCenter = new Point(width / 2, length / 5);
 
-            boiskoLiniaGorna.wykonaj();
-            boiskoLiniaDolna.wykonaj();
-            boiskoLiniaLewa.wykonaj();
-            boiskoLiniaPrawa.wykonaj();
-            poleKarneGorneLewaLinia.wykonaj();
-            poleKarneGornePrawaLinia.wykonaj();
-            poleKarneGorneDolnaLinia.wykonaj();
-            //okragSrodkowy.Wykonaj();
-            //polokrag.Wykonaj();
-
-
-
-            //lewyPunktLiniiSrodkowej = new Punkt(0, (dlugosc-1) / 2);
-            //prawyPunktLiniiSrodkowej = new Punkt(szerokosc-1, (dlugosc-1) / 2);
-            //srodekBoiska = new Punkt((szerokosc - 1) / 2, (dlugosc - 1) / 2);
-            //poleKarneGorneLewyPunkt = new Punkt(szerokosc / 4, dlugosc / 7);
-            //poleKarneGornePrawyPunkt = new Punkt(szerokosc * 3 / 4, dlugosc / 7);
-            //poleKarneDolneLewyPunkt = new Punkt(szerokosc / 4, dlugosc * 6 / 7);
-            //poleKarneDolneLewyPunkt = new Punkt(szerokosc * 3 / 4, dlugosc * 6 / 7);
-            //boiskoLiniaSrodkowa = new Odcinek(lewyPunktLiniiSrodkowej, prawyPunktLiniiSrodkowej, this);
-            //poleKarneGorneLewaLinia = new Odcinek(new Punkt(szerokosc / 4, 0), poleKarneGorneLewyPunkt, this);
-            //poleKarneGornePrawaLinia = new Odcinek(new Punkt(szerokosc * 3 / 4, 0), poleKarneGornePrawyPunkt, this);
-            //poleKarneGorneDolnaLinia = new Odcinek(poleKarneGorneLewyPunkt, poleKarneGornePrawyPunkt, this);
-            //okragSrodkowy = new Okrag(srodekBoiska, 5, this);
-
+            pitchTopLine = new Line(pitchTopLeftCorner, pitchTopRightCorner, '─');
+            pitchBottomLine = new Line(pitchBottomLeftCorner, pitchBottomRightCorner, '─');
+            pitchLeftLine = new Line(pitchTopLeftCorner, pitchBottomLeftCorner, '│');
+            pitchRightLine = new Line(pitchTopRightCorner, pitchBottomRightCorner, '│');
+            topPenaltyAreaLeftLine = new Line(topPenaltyAreaTopLeftCorner, topPenaltyAreaBottomLeftCorner, '│');
+            topPenaltyAreaRightLine = new Line(topPenaltyAreaTopRightCorner, topPenaltyAreaBottomRightCorner, '│');
+            topPenaltyAreaBottomLine = new Line(topPenaltyAreaBottomLeftCorner, topPenaltyAreaBottomRightCorner, '─');
         }
 
-        public void draw(int x0, int y0)
+        public void Draw(int x0, int y0)
         {
-            for (int y = 0; y < dlugosc; y++)
+            for (int y = 0; y < Length; y++)
             {
-                for (int x = 0; x < szerokosc; x++)
+                for (int x = 0; x < Width; x++)
                 {
                     Console.SetCursorPosition(x0 + x, y0 + y);
-                    if (boisko[y, x] == 1) Console.Write('*');
-                    else if (boisko[y, x] == 2) Console.Write('#');
-                    else Console.Write(' ');
+                    Console.SetBackgroundColor(ConsoleColor.Green);
+                    Console.Write(' ');
                 }
-                Console.WriteLine();
             }
-            //Console.ReadKey();
-
-            //for (int y = 0; y < 3; y++)
-            //{
-            //    for (int x = 0; x < 7; x++)
-            //    {
-            //        Console.SetCursorPosition(x0 + srodekPolokregu.X - 3 + x, y0 + srodekPolokregu.Y - 3 + y);
-            //        Console.Write(" ");
-            //    }
-            //}
-            //Console.ReadKey();
+            pitchTopLine.Draw(x0, y0);
+            pitchBottomLine.Draw(x0, y0);
+            pitchLeftLine.Draw(x0, y0);
+            pitchRightLine.Draw(x0, y0);
+            topPenaltyAreaLeftLine.Draw(x0, y0);
+            topPenaltyAreaRightLine.Draw(x0, y0);
+            topPenaltyAreaBottomLine.Draw(x0, y0);
+            pitchTopLeftCorner.Draw(x0, y0);
+            pitchTopRightCorner.Draw(x0, y0);
+            pitchBottomLeftCorner.Draw(x0, y0);
+            pitchBottomRightCorner.Draw(x0, y0);
+            topPenaltyAreaTopLeftCorner.Draw(x0, y0);
+            topPenaltyAreaTopRightCorner.Draw(x0, y0);
+            topPenaltyAreaBottomLeftCorner.Draw(x0, y0);
+            topPenaltyAreaBottomRightCorner.Draw(x0, y0);
         }
 
-        public void writeNumbers(int x0, int y0, Club druzyna)
+        public void WriteNumbers(int x0, int y0, Club team)
         {
             int u = 0;
             //if (druzyna.tactics.posture == Tactics.postures[1]) u = -1;
             //if (druzyna.tactics.posture == Tactics.postures[3]) u = 1;
             Window.setColor(Position.goalkeeper);
-            Console.SetCursorPosition(x0 + srodekPolokregu.X, y0 + srodekPolokregu.Y / 2); Console.Write("1");
-            if (druzyna.tactics.formation == Tactics.formations[0])
+            Console.SetCursorPosition(x0 + topCircleCenter.X, y0 + topCircleCenter.Y / 2); Console.Write("1");
+            if (team.tactics.formation == Tactics.formations[0]) // 5-4-1
             {
                 Window.setColor(Position.defender);
-                Console.SetCursorPosition(x0 + szerokosc * 3 / 10, y0 + (int)(dlugosc * 0.3)); Console.Write("2");
-                Console.SetCursorPosition(x0 + szerokosc * 7 / 10, y0 + (int)(dlugosc * 0.3)); Console.Write("3");
-                Console.SetCursorPosition(x0 + szerokosc * 1 / 10, y0 + (int)(dlugosc * 0.4)); Console.Write("4");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + (int)(dlugosc * 0.4)); Console.Write("5");
-                Console.SetCursorPosition(x0 + szerokosc * 9 / 10, y0 + (int)(dlugosc * 0.4)); Console.Write("6");
+                Console.SetCursorPosition(x0 + Width * 3 / 10, y0 + (int)(Length * 0.3)); Console.Write("2");
+                Console.SetCursorPosition(x0 + Width * 7 / 10, y0 + (int)(Length * 0.3)); Console.Write("3");
+                Console.SetCursorPosition(x0 + Width * 1 / 10, y0 + (int)(Length * 0.4)); Console.Write("4");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + (int)(Length * 0.4)); Console.Write("5");
+                Console.SetCursorPosition(x0 + Width * 9 / 10, y0 + (int)(Length * 0.4)); Console.Write("6");
                 Window.setColor(Position.midfielder);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + (int)(dlugosc * 0.6)); Console.Write("7");
-                Console.SetCursorPosition(x0 + szerokosc * 4 / 10, y0 + (int)(dlugosc * 0.6)); Console.Write("8");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + (int)(dlugosc * 0.6)); Console.Write("9");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + (int)(dlugosc * 0.6)); Console.Write("10");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + (int)(Length * 0.6)); Console.Write("7");
+                Console.SetCursorPosition(x0 + Width * 4 / 10, y0 + (int)(Length * 0.6)); Console.Write("8");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + (int)(Length * 0.6)); Console.Write("9");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + (int)(Length * 0.6)); Console.Write("10");
                 Window.setColor(Position.forward);
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + (int)(dlugosc * 0.85)); Console.Write("11");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + (int)(Length * 0.85)); Console.Write("11");
             }
-            if (druzyna.tactics.formation == Tactics.formations[1])
+            if (team.tactics.formation == Tactics.formations[1]) //  5-3-2
             {
                 Window.setColor(Position.defender);
-                Console.SetCursorPosition(x0 + szerokosc * 3 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("2");
-                Console.SetCursorPosition(x0 + szerokosc * 7 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("3");
-                Console.SetCursorPosition(x0 + szerokosc * 1 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("4");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("5");
-                Console.SetCursorPosition(x0 + szerokosc * 9 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("6");
+                Console.SetCursorPosition(x0 + Width * 3 / 10, y0 + Length * 3 / 10 + u); Console.Write("2");
+                Console.SetCursorPosition(x0 + Width * 7 / 10, y0 + Length * 3 / 10 + u); Console.Write("3");
+                Console.SetCursorPosition(x0 + Width * 1 / 10, y0 + Length * 4 / 10 + u); Console.Write("4");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 4 / 10 + u); Console.Write("5");
+                Console.SetCursorPosition(x0 + Width * 9 / 10, y0 + Length * 4 / 10 + u); Console.Write("6");
                 Window.setColor(Position.midfielder);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("7");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("8");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("9");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 6 / 10 + u); Console.Write("7");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 6 / 10 + u); Console.Write("8");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 6 / 10 + u); Console.Write("9");
                 Window.setColor(Position.forward);
-                Console.SetCursorPosition(x0 + szerokosc * 4 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("10");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("11");
+                Console.SetCursorPosition(x0 + Width * 4 / 10, y0 + Length * 8 / 10 + u); Console.Write("10");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + Length * 8 / 10 + u); Console.Write("11");
             }
-            if (druzyna.tactics.formation == Tactics.formations[2])
+            if (team.tactics.formation == Tactics.formations[2]) // 4-5-1
             {
                 Window.setColor(Position.defender);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("2");
-                Console.SetCursorPosition(x0 + szerokosc * 4 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("3");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("4");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("5");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 3 / 10 + u); Console.Write("2");
+                Console.SetCursorPosition(x0 + Width * 4 / 10, y0 + Length * 3 / 10 + u); Console.Write("3");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + Length * 3 / 10 + u); Console.Write("4");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 3 / 10 + u); Console.Write("5");
                 Window.setColor(Position.midfielder);
-                Console.SetCursorPosition(x0 + szerokosc * 3 / 10, y0 + dlugosc * 5 / 10 + u); Console.Write("6");
-                Console.SetCursorPosition(x0 + szerokosc * 7 / 10, y0 + dlugosc * 5 / 10 + u); Console.Write("7");
-                Console.SetCursorPosition(x0 + szerokosc * 1 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("8");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("9");
-                Console.SetCursorPosition(x0 + szerokosc * 9 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("10");
+                Console.SetCursorPosition(x0 + Width * 3 / 10, y0 + Length * 5 / 10 + u); Console.Write("6");
+                Console.SetCursorPosition(x0 + Width * 7 / 10, y0 + Length * 5 / 10 + u); Console.Write("7");
+                Console.SetCursorPosition(x0 + Width * 1 / 10, y0 + Length * 6 / 10 + u); Console.Write("8");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 6 / 10 + u); Console.Write("9");
+                Console.SetCursorPosition(x0 + Width * 9 / 10, y0 + Length * 6 / 10 + u); Console.Write("10");
                 Window.setColor(Position.forward);
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("11");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 8 / 10 + u); Console.Write("11");
             }
-            if (druzyna.tactics.formation == Tactics.formations[3])
+            if (team.tactics.formation == Tactics.formations[3]) // 4-4-2
             {
                 Window.setColor(Position.defender);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("2");
-                Console.SetCursorPosition(x0 + szerokosc * 4 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("3");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("4");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("5");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 4 / 10 + u); Console.Write("2");
+                Console.SetCursorPosition(x0 + Width * 4 / 10, y0 + Length * 4 / 10 + u); Console.Write("3");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + Length * 4 / 10 + u); Console.Write("4");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 4 / 10 + u); Console.Write("5");
                 Window.setColor(Position.midfielder);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("6");
-                Console.SetCursorPosition(x0 + szerokosc * 4 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("7");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("8");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("9");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 6 / 10 + u); Console.Write("6");
+                Console.SetCursorPosition(x0 + Width * 4 / 10, y0 + Length * 6 / 10 + u); Console.Write("7");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + Length * 6 / 10 + u); Console.Write("8");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 6 / 10 + u); Console.Write("9");
                 Window.setColor(Position.forward);
-                Console.SetCursorPosition(x0 + szerokosc * 3 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("10");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("11");
+                Console.SetCursorPosition(x0 + Width * 3 / 10, y0 + Length * 8 / 10 + u); Console.Write("10");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + Length * 8 / 10 + u); Console.Write("11");
             }
-            if (druzyna.tactics.formation == Tactics.formations[4])
+            if (team.tactics.formation == Tactics.formations[4]) // 4-3-3
             {
                 Window.setColor(Position.defender);
-                Console.SetCursorPosition(x0 + szerokosc * 1 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("2");
-                Console.SetCursorPosition(x0 + szerokosc * 4 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("3");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("4");
-                Console.SetCursorPosition(x0 + szerokosc * 9 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("5");
+                Console.SetCursorPosition(x0 + Width * 1 / 10, y0 + Length * 4 / 10 + u); Console.Write("2");
+                Console.SetCursorPosition(x0 + Width * 4 / 10, y0 + Length * 4 / 10 + u); Console.Write("3");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + Length * 4 / 10 + u); Console.Write("4");
+                Console.SetCursorPosition(x0 + Width * 9 / 10, y0 + Length * 4 / 10 + u); Console.Write("5");
                 Window.setColor(Position.midfielder);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("6");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("7");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("8");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 6 / 10 + u); Console.Write("6");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 6 / 10 + u); Console.Write("7");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 6 / 10 + u); Console.Write("8");
                 Window.setColor(Position.forward);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("9");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("10");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("11");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 8 / 10 + u); Console.Write("9");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 8 / 10 + u); Console.Write("10");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 8 / 10 + u); Console.Write("11");
             }
-            if (druzyna.tactics.formation == Tactics.formations[5])
+            if (team.tactics.formation == Tactics.formations[5]) // 3-5-2
             {
                 Window.setColor(Position.defender);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("2");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("3");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 3 / 10 + u); Console.Write("4");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 3 / 10 + u); Console.Write("2");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 3 / 10 + u); Console.Write("3");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 3 / 10 + u); Console.Write("4");
                 Window.setColor(Position.midfielder);
-                Console.SetCursorPosition(x0 + szerokosc * 3 / 10, y0 + dlugosc * 5 / 10 + u); Console.Write("5");
-                Console.SetCursorPosition(x0 + szerokosc * 7 / 10, y0 + dlugosc * 5 / 10 + u); Console.Write("6");
-                Console.SetCursorPosition(x0 + szerokosc * 1 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("7");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("8");
-                Console.SetCursorPosition(x0 + szerokosc * 9 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("9");
+                Console.SetCursorPosition(x0 + Width * 3 / 10, y0 + Length * 5 / 10 + u); Console.Write("5");
+                Console.SetCursorPosition(x0 + Width * 7 / 10, y0 + Length * 5 / 10 + u); Console.Write("6");
+                Console.SetCursorPosition(x0 + Width * 1 / 10, y0 + Length * 6 / 10 + u); Console.Write("7");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 6 / 10 + u); Console.Write("8");
+                Console.SetCursorPosition(x0 + Width * 9 / 10, y0 + Length * 6 / 10 + u); Console.Write("9");
                 Window.setColor(Position.forward);
-                Console.SetCursorPosition(x0 + szerokosc * 3 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("10");
-                Console.SetCursorPosition(x0 + szerokosc * 7 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("11");
+                Console.SetCursorPosition(x0 + Width * 3 / 10, y0 + Length * 8 / 10 + u); Console.Write("10");
+                Console.SetCursorPosition(x0 + Width * 7 / 10, y0 + Length * 8 / 10 + u); Console.Write("11");
             }
-            if (druzyna.tactics.formation == Tactics.formations[6])
+            if (team.tactics.formation == Tactics.formations[6]) // 3-4-3
             {
                 Window.setColor(Position.defender);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("2");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("3");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 4 / 10 + u); Console.Write("4");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 4 / 10 + u); Console.Write("2");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 4 / 10 + u); Console.Write("3");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 4 / 10 + u); Console.Write("4");
                 Window.setColor(Position.midfielder);
-                Console.SetCursorPosition(x0 + szerokosc * 1 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("5");
-                Console.SetCursorPosition(x0 + szerokosc * 4 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("6");
-                Console.SetCursorPosition(x0 + szerokosc * 6 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("7");
-                Console.SetCursorPosition(x0 + szerokosc * 9 / 10, y0 + dlugosc * 6 / 10 + u); Console.Write("8");
+                Console.SetCursorPosition(x0 + Width * 1 / 10, y0 + Length * 6 / 10 + u); Console.Write("5");
+                Console.SetCursorPosition(x0 + Width * 4 / 10, y0 + Length * 6 / 10 + u); Console.Write("6");
+                Console.SetCursorPosition(x0 + Width * 6 / 10, y0 + Length * 6 / 10 + u); Console.Write("7");
+                Console.SetCursorPosition(x0 + Width * 9 / 10, y0 + Length * 6 / 10 + u); Console.Write("8");
                 Window.setColor(Position.forward);
-                Console.SetCursorPosition(x0 + szerokosc * 2 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("9");
-                Console.SetCursorPosition(x0 + szerokosc * 5 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("10");
-                Console.SetCursorPosition(x0 + szerokosc * 8 / 10, y0 + dlugosc * 8 / 10 + u); Console.Write("11");
+                Console.SetCursorPosition(x0 + Width * 2 / 10, y0 + Length * 8 / 10 + u); Console.Write("9");
+                Console.SetCursorPosition(x0 + Width * 5 / 10, y0 + Length * 8 / 10 + u); Console.Write("10");
+                Console.SetCursorPosition(x0 + Width * 8 / 10, y0 + Length * 8 / 10 + u); Console.Write("11");
             }
             Console.ResetColor();
         }
@@ -211,57 +193,60 @@ namespace FootballManager
 
 
 
-        int promien;
+        int radius;
 
-        Punkt gornyLewyRogBoiska;
-        Punkt gornyPrawyRogBoiska;
-        Punkt dolnyLewyRogBoiska;
-        Punkt dolnyPrawyRogBoiska;
-        Punkt poleKarneGorneLewyPunkt;
-        Punkt poleKarneGornePrawyPunkt;
-        //Punkt srodekBoiska;
-        Punkt srodekPolokregu;
+        private readonly Point pitchTopLeftCorner;
+        private readonly Point pitchTopRightCorner;
+        private readonly Point pitchBottomLeftCorner;
+        private readonly Point pitchBottomRightCorner;
+        private readonly Point topPenaltyAreaTopLeftCorner;
+        private readonly Point topPenaltyAreaTopRightCorner;
+        private readonly Point topPenaltyAreaBottomLeftCorner;
+        private readonly Point topPenaltyAreaBottomRightCorner;
+        private readonly Point pitchCenter;
+        private readonly Point topCircleCenter;
 
-        Odcinek boiskoLiniaGorna;
-        Odcinek boiskoLiniaDolna;
-        Odcinek boiskoLiniaLewa;
-        Odcinek boiskoLiniaPrawa;
-        Odcinek poleKarneGorneDolnaLinia;
-        Odcinek poleKarneGorneLewaLinia;
-        Odcinek poleKarneGornePrawaLinia;
-        //Okrag okragSrodkowy;
-        //Okrag polokrag;
-
-        //Punkt lewyPunktLiniiSrodkowej;
-        //Punkt prawyPunktLiniiSrodkowej;
-        //Punkt poleKarneDolneLewyPunkt;
-        //Punkt poleKarneDolnePrawyPunkt;
-        //Odcinek poleKarneDolneGornaLinia;
-        //Odcinek poleKarneDolneLewaLinia;
-        //Odcinek poleKarneDolnePrawaLinia;
-        //Odcinek boiskoLiniaSrodkowa;
+        private readonly Line pitchTopLine;
+        private readonly Line pitchBottomLine;
+        private readonly Line pitchLeftLine;
+        private readonly Line pitchRightLine;
+        private readonly Line topPenaltyAreaBottomLine;
+        private readonly Line topPenaltyAreaLeftLine;
+        private readonly Line topPenaltyAreaRightLine;
     }
 
-    class Punkt
+    class Point
     {
-        public int X { get { return x; } }
-        public int Y { get { return y; } }
-        public Punkt(int x, int y)
+        public int X { get; private set; }
+        public int Y { get; private set; }
+        public Point(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
-        int x;
-        int y;
+        public Point(int x, int y, char sign)
+        {
+            this.X = x;
+            this.Y = y;
+            this.sign = sign;
+        }
+
+        public void Draw(int x0, int y0)
+        {
+            //Console.SetForegroundColor(ConsoleColor.White);
+            //Console.SetBackgroundColor(ConsoleColor.Green);
+            Console.SetCursorPosition(x0 + X, y0 + Y);
+            Console.Write(sign);
+        }
+
+        private readonly char sign;
     }
 
-    class Odcinek
+    class Line
     {
-        public Odcinek(Punkt p1, Punkt p2, Pitch b)
+        public Line(Point p1, Point p2, char sign)
         {
-            n = b.dlugosc;
-            m = b.szerokosc;
-            tablica = b.boisko;
+            this.sign = sign;
             x1 = p1.X;
             y1 = p1.Y;
             x2 = p2.X;
@@ -271,15 +256,19 @@ namespace FootballManager
             dy = Math.Abs(y2 - y1);
             if (x1 <= x2) kx = 1; else kx = -1;
             if (y1 <= y2) ky = 1; else ky = -1;
-            tablica[y1, x1] = 1;
-            tablica[y2, x2] = 1;
         }
-        public void wykonaj()
+        public void Draw(int x0, int y0)
         {
+            x1 = x1 + x0;
+            y1 = y1 + y0;
+            x2 = x2 + x0;
+            y2 = y2 + y0;
             if (x1 <= x2) kx = 1; else kx = -1;
             if (y1 <= y2) ky = 1; else ky = -1;
-            tablica[y1, x1] = 1;
-            tablica[y2, x2] = 1;
+            Console.SetCursorPosition(x1, y1);
+            Console.Write(sign);
+            Console.SetCursorPosition(x2, y2);
+            Console.Write(sign);
             if (dx < dy)
             {
                 e = dy / 2;
@@ -287,13 +276,13 @@ namespace FootballManager
                 {
                     y1 = y1 + ky;
                     e = e - dx;
-                    if (e >= 0) tablica[y1, x1] = 1;
-                    else
+                    if (e < 0)
                     {
                         x1 = x1 + kx;
                         e = e + dy;
-                        tablica[y1, x1] = 1;
                     }
+                    Console.SetCursorPosition(x1, y1);
+                    Console.Write(sign);
                 }
             }
             else
@@ -301,37 +290,33 @@ namespace FootballManager
                 e = dx / 2;
                 for (int i = 0; i < dx; i++)
                 {
-                    x1 = x1 + kx;
-                    e = e - dy;
-                    if (e >= 0) tablica[y1, x1] = 1;
-                    else
+                    x1 += kx;
+                    e -= dy;
+                    if (e < 0)
                     {
-                        y1 = y1 + ky;
-                        e = e + dx;
-                        tablica[y1, x1] = 1;
+                        y1 += ky;
+                        e =+ dx;
                     }
+                    Console.SetCursorPosition(x1, y1);
+                    Console.Write(sign);
                 }
             }
         }
 
-        int n;
-        int m;
-        int[,] tablica;
-        int x1;
-        int y1;
-        int x2;
-        int y2;
-        int kx;
-        int ky;
-        int e;
-        int dx;
-        int dy;
+        private char sign;
+        private int x1;
+        private int y1;
+        private int x2;
+        private int y2;
+        private int kx;
+        private int ky;
+        private int e;
+        private int dx;
+        private int dy;
     }
 
-    class Okrag
+    class Circle
     {
-        int n;
-        int m;
         int[,] tablica;
         int xC;
         int yC;
@@ -341,10 +326,8 @@ namespace FootballManager
         int d;
         int d1;
         int d2;
-        public Okrag(Punkt p, int R, Pitch b)
+        public Circle(Point p, int R, Pitch b)
         {
-            n = b.dlugosc;
-            m = b.szerokosc;
             tablica = b.boisko;
             this.xC = p.X;
             this.yC = p.Y;

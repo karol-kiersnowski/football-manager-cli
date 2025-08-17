@@ -7,26 +7,14 @@
 
         public static System.ConsoleColor BackgroundColor
         {
-            get
-            {
-                return System.Console.BackgroundColor;
-            }
-            set
-            {
-                System.Console.BackgroundColor = value;
-            }
+            get { return System.Console.BackgroundColor; }
+            set { System.Console.BackgroundColor = value; }
         }
 
         public static System.ConsoleColor ForegroundColor
         {
-            get
-            {
-                return System.Console.ForegroundColor;
-            }
-            set
-            {
-                System.Console.ForegroundColor = value;
-            }
+            get { return System.Console.ForegroundColor; }
+            set { System.Console.ForegroundColor = value; }
         }
 
         public static System.ConsoleKeyInfo ReadKey()
@@ -74,6 +62,16 @@
             System.Console.ResetColor();
         }
 
+        public static void SetForegroundColor(System.ConsoleColor color)
+        {
+            System.Console.ForegroundColor = color;
+        }
+
+        public static void SetBackgroundColor(System.ConsoleColor color)
+        {
+            System.Console.BackgroundColor = color;
+        }
+
         public static void SetCursorPosition(int left, int top)
         {
             try
@@ -113,28 +111,28 @@
             {
                 displayMessage(e.Message);
             }
-            //try
-            //{
-            //    if (Width <= System.Console.LargestWindowWidth && Height <= System.Console.LargestWindowHeight)
-            //    {
-            //        System.Console.WindowWidth = width;
-            //        System.Console.WindowHeight = height;
-            //        System.Console.BufferWidth = width;
-            //        Width = width;
-            //        Height = height;
-            //    }
-            //}
-            //catch (System.Exception e)
-            //{
-            //    displayMessage(e.Message);
-            //}
+            try
+            {
+                if (Width <= System.Console.LargestWindowWidth && Height <= System.Console.LargestWindowHeight)
+                {
+                    System.Console.WindowWidth = width;
+                    System.Console.WindowHeight = height;
+                    System.Console.BufferWidth = width;
+                    Width = width;
+                    Height = height;
+                }
+            }
+            catch (System.Exception e)
+            {
+                displayMessage(e.Message);
+            }
         }
 
         static void displayMessage(string text)
         {
             Console.WriteLine(">> Error <<\n");
             Console.WriteLine(text);
-            //Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
